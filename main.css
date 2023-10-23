@@ -17,7 +17,7 @@ body{
 
 body > header{
     background-color: #27282c;
-    color: #2e8ffd ;
+    color: #e7eaec;
     padding: 16px 0;
 }
 header .container{
@@ -30,7 +30,7 @@ header li{
 }
 header li a{
     text-decoration: none;
-    color: #2e8ffd;
+    color: #e7eaec;
     font-weight: bold;
     font-size: 1em;
     margin-left: 2em;
@@ -83,14 +83,52 @@ section h2, .articles article{
     font-weight: 600;
     font-size: 1em;
 }
-#sports .articles article a{
+/*tarefa*/
+#cie .articles article a{
     background-color: #2e8ffd;
     color: #e7eaec;
 }
+#cie h2{
+    color: #2e8ffd;
+}
+#cie .separador{
+    background-color: #2e8ffd;
+}
+
+#cult .articles article a{
+    background-color: #d66a2c;
+    color: #e7eaec;
+}
+#cult h2{
+    color: #d66a2c;
+}
+#cult .separador{
+    background-color: #d66a2c;
+}
+
 #economy .articles article a{
-    background-color: #2e8ffd;
+    background-color: #0e5c35;
     color: #e7eaec;
 }
+#economy h2{
+    color: #0e5c35;
+}
+#economy .separador{
+    background-color: #0e5c35;
+}
+
+#sports .articles article a{
+    background-color: rgb(196, 39, 39);
+    color: #e7eaec;
+}
+#sports h2{
+    color:  rgb(196, 39, 39);
+}
+#sports .separador{
+    background-color:  rgb(196, 39, 39);
+}
+
+
 .creation-date{
     color: #27282c5e;
     font-size: 0.8em;
