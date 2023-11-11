@@ -2,29 +2,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
 }
-
-h2{
-    text-transform: uppercase;
-}
+/*
+#f9f5f2;
+#ead9cc;
+#847c79;
+#3d3531;
+*/
 
 .container{
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
 }
-
-.separador{ /* Barra horizontal separadora com div*/
-    background-color: blue; 
-    padding: 0.1em;
-    margin: 1em 0;
+body{
+    background-color: #f9f5f2;
 }
+.separador{ /* Barra horizontal separadora com div*/
+    background-color: #847c79; 
+    padding: 0.05em;
+    margin: 0.5em 0;
+}
+h2{
+    color: #3d3531;
+    font-weight: 600;
+}
+
 
 
 header{
     padding: 2em 0;
-    background-color: aqua;
-    color: black;
+    background-color: #3d3531;
 }
 header .container{
     display: flex;
@@ -35,14 +44,13 @@ header nav li, .brands-list li{
     margin-left: 2em;
 }
 header nav li a{
-    color: brown;
+    color:#ead9cc;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.1em;
-    text-transform: uppercase;
 }
 header img{
-    height: 2em;
+    height: 4em;
     margin-right: 1em;
 }
 header h1{
@@ -52,27 +60,6 @@ header h1{
     display: flex;
     justify-content: flex-end; /* Assim mantenho o logo e o titulo juntos e a lista nav a direita*/
 }
-
-
-
-
-
-.menu{ /*menu responsivo*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.menu img{ 
-    max-width: 200px;
-    width: 125%;
-    border-radius: 1em;
-    object-fit: cover; /* Mantenho a imagem cabendo dentro do espaço "fit"*/
-    
-}
-.itens{
-    max-width: 14%; /* Dividir o menu entre as imagens*/
-}
-
 
 
 
@@ -98,6 +85,25 @@ section{
 }
 section p{
     margin-bottom: 1em;
+    color: #3d3531;
+    font-weight: 500;
+}
+
+
+.menu{ /*menu responsivo*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu img{ 
+    max-width: 200px;
+    width: 125%;
+    border-radius: 1em;
+    object-fit: cover; /* Mantenho a imagem cabendo dentro do espaço "fit"*/
+    
+}
+.itens{
+    max-width: 14%; /* Dividir o menu entre as imagens*/
 }
 
 
@@ -113,9 +119,15 @@ form input, textarea{
     display: block;
     width: 720px;
     height: 3em;
+    margin-bottom: 0.5em;
+    border: solid 0.05em #3d3531;
+    padding: 1em;
+    background-color:#f9f5f2;
+    color: #3d3531;
 }
 .formus img{
     height: 25em;
+    margin-right: 2em;
 }
 .formus{
     display: flex;
@@ -127,8 +139,8 @@ textarea{
     height: 10em;
 }
 button{
-    background-color: blue;
-    color: antiquewhite;
+    background-color: #3d3531;
+    color: #ead9cc;
     border: none;
     cursor: pointer;
     font-weight: bold;
@@ -136,8 +148,8 @@ button{
     padding: 0.5em;
     width: 10em;
     display: block;
-    margin: 1em auto 0 auto;
-    border-radius: 1em;
+    margin: 2em auto auto auto;
+    border-radius: 0.5em;
 }
 
 
@@ -145,8 +157,8 @@ button{
 
 footer{
     margin-top: 2em;
-    background-color: blue;
-    color: aliceblue;
+    background-color: #3d3531;
+    color: #ead9cc;
     padding: 2em;
     display: flex;
     justify-content: flex-end;
