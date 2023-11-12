@@ -32,7 +32,7 @@ function adicionaLinha(){
     let linha = '<tr>'; /*inicia linha*/
     linha += `<td>${inputNomeAtividade.value}</td>`; /*Coluna 01*/
     linha += `<td>${inputNotaAtividade.value}</td>`; /*Coluna 02*/
-    linha += `<td>${inputNotaAtividade.value >= 7 ? imgAprovado : imgReprovado} </td>`; /*Coluna 03. ? seria o if e os : são o else.*/
+    linha += `<td>${inputNotaAtividade.value >= notaMinina ? imgAprovado : imgReprovado} </td>`; /*Coluna 03. ? seria o if e os : são o else.*/
     linha += `</tr>`; /*finaliza linha*/
 
     linhas += linha; /*recebe linha*/
