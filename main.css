@@ -32,7 +32,6 @@ ul{
     margin: auto;
     padding: 0;
     margin-bottom: 3em;
-    background-color: red;
 }
 ul li{
     flex: 0 0 13%;
