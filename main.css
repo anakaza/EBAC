@@ -4,15 +4,18 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; /*Fonte questionável mas se adequa a proposta*/
 }
-
+body{
+    background-color: #ebebeb;
+}
 header{
-    background-color: rgba(128, 128, 128, 0.226);
+    background-color: rgb(0, 0, 0);
     padding: 1em 0;
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 3em;
+    color:#fff;
 }
 
 main{
@@ -31,7 +34,7 @@ ul{
     max-width: 1360px;
     margin: auto;
     padding: 0;
-    margin-bottom: 3em;
+    margin-bottom: 7em;
 }
 ul li{
     flex: 0 0 13%;
@@ -55,7 +58,7 @@ ul li img{
 ul li a{
     text-decoration: none;
     font-weight: 600;
-    color:black;
+    color: #fff;
     display: flex;
     font-size: 1.2em;
     text-transform: uppercase;
@@ -78,7 +81,7 @@ ul li:hover .overlay-image-link a {
 }
 */
 .overlay-image-link {
-    background-color: yellow;
+    background-color:  #141414;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -90,7 +93,7 @@ ul li:hover .overlay-image-link a {
     transition: opacity 0.3s ease-in-out; /*pequisando sobre o transition*/
 }
 ul li:hover .overlay-image-link {
-    opacity: 1;
+    opacity: 0.8;
 }
 
 form{
@@ -108,11 +111,11 @@ input{
     opacity: 0.5;
 }
 button{
-    background-color: yellow;
+    background-color: black;
     border-radius: 0.3em;
     font-weight: bold;
     text-transform: uppercase;
-    color: rgb(0, 0, 0);
+    color: white;
     cursor: pointer;
     border: none;
     margin: 1em;
@@ -133,6 +136,7 @@ button{
     justify-content: center;
     align-items: center;
     font-size: 2em;
+    margin-bottom: 2em;
 }
 #btn-fixo:hover{
     background-color: black;
@@ -142,8 +146,14 @@ button
     display: none;
 }
 #btn-fixo.active {
-    background-color: rgba(255, 0, 0, 0.562);
-}
-#btn-fixo.active:hover {
     background-color: rgb(255, 0, 0);
+}
+
+footer{
+    padding: 1em;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    display: flex;
+    justify-content: end;
+    padding-right: 3em;
 }
