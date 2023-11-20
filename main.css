@@ -2,12 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 body{ 
-    background-color: rgba(0, 0, 0, 0.671);
-    color: aliceblue;
+    background-color: rgb(255, 255, 255);
+    color: black;
     padding-top: 4em;
 }
 
@@ -18,7 +18,8 @@ header{
 }
 header img{
     height: 3em;
-    margin-right: 1em;
+    margin: 1em;
+    opacity: 0.9;
 }
 
 header h1{
@@ -27,69 +28,82 @@ header h1{
 }
 
 .container{
-    max-width: 760px;
+    background-color: rgba(0, 0, 0, 0.151);
+    max-width: 500px;
     width: 100%;
     margin: 0 auto;
+    border-radius: 0.2em;
 }
 
 form{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
 }
-
 form input{
+    max-width: 10em;
     font-size: 1em;
     background-color: #fff;
     border: none;
-    border-bottom: 0.15em solid black;
     padding: 0.2em;
+    border-radius: 0.3em;
+    margin-left: 2em;
 }
-
+form input[type="number"]::-webkit-inner-spin-button,
+form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
 form button{
-    background-color: greenyellow;
+    background-color: #837d9c;
     font-size: 1em;
     padding: 0.3em;
     font-weight: bold;
     border: none;
     cursor: pointer;
     border-radius: 0.2em;
-    margin-left: 1em;
+    width: 2em;
+    margin: 0 2.5em;
 }
+
 
 table{
     width: 100%;
     text-align: center;
 }
-
 table th{
-    border-bottom: 0.15em solid white;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 1em 0 0 0;
+    border-bottom: 0.15em solid rgba(255, 255, 255, 0.336);
+    font-weight: 600;
 }
 table td{
-    font-size: 1em;
     padding:  0.5em 0;
-    border-bottom: 1px solid rgba(245, 245, 245, 0.123);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.123);
 }
 table td img{
     height: 1.5em;
 }
 
 .resultado{
-    padding: 0.4em;
-    font-weight: 400;
+    padding: 0.2em 0.3em;
+    font-weight: 600;
     color: #fff;
     background-color: black;
     border-radius: 0.2em;
     font-size: 16px;
 }
 .aprovado{
-    background-color: greenyellow;
-    color: black;
+    background-color: #3c0bff;
+    color: white;
 }
 .reprovado{
-    background-color: red;
+    background-color:  #000000;
+    color: white;
+}
+
+tfoot{
+    font-weight: 600;
+    background-color: #00000013;
 }
