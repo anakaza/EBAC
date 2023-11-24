@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <title>Modulo 10 - Ebac Motors</title>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <h1>EBAC Motors</h1>
+            <!--Menu hamburguer-->
+            <div class="menu-hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--Menu hamburguer-->
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#">Em destaque</a>
+                    </li>
+                    <li>
+                        <a href="#">Promoções</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--corrosel-->
+    <div id="carrosel-imagens">
+        <img src="./images/slide1.png" alt="Carro porsche">
+        <img src="./images/slide2.png" alt="Carro BMW">
+        <img src="./images/slide3.png" alt="Carro Ford">
+    </div>
+
+
+    <section>
+        <div class="container">
+            <img src="./images/loja.jpg" alt="Imagem da loja EBAC mortos">
+            <h2>Sobre a EBAC Motors</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, illo magni aliquid perspiciatis consequatur nostrum repellat et aperiam enim, tempora, voluptatibus alias maxime minima laboriosam suscipit dicta modi natus eum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam adipisci amet illum non eligendi iste consequuntur exercitationem, consequatur quae fugit alias omnis natus ipsam nostrum fugiat dicta molestiae officia deserunt!</p>
+        </div>
+    </section>
+
+
+    <!--jquery-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--inicializador jquery-->
+    <script>
+        $(document).ready(function(){
+
+            /*efunção carrosel slick*/
+            $('#carrosel-imagens').slick({
+                autoplay: true,
+                arrows: false
+            });
+
+            /*Função exibir ou esconder o menu (nav) do menu hamburguer(spans) */
+            $('.menu-hamburguer').click(function(){
+                $('nav').slideToggle();
+            })
+        })
+    </script>
+</body>
+</html>
