@@ -20,7 +20,7 @@ header{
     top: 0; /*Posição de referência para fixação*/
     left: 0; /*Posição de referência para fixação*/
     /*Como o carrossel tem um posição relative acontece uma concorrência de exibição na página, um cobrindo o outro*/
-    z-index: 1; /*Coloca o carrossel numa layer a frente do restante.*/
+    z-index: 1; /*Coloca o carrossel numa layer a frente do restante. O z-index define a ordem d emepilhamento em um documento html em formato de pilha.*/
 } 
 header > .container{
     justify-content: space-between;
@@ -61,7 +61,7 @@ nav li a{
 
 /*Sections*/
 section{
-    padding: 4em 0;
+    padding: 3em 0 1em 0;
 }
 section h2{
     margin-bottom: 1em;
@@ -168,4 +168,5 @@ footer li img{
 footer .container{
     justify-content: space-between; /*espaçar o texto dos links*/
     align-items: center;
+    display: flex;
 }

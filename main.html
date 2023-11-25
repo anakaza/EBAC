@@ -45,8 +45,8 @@
         </nav>
     </header>
 
-    <!--carrosel-->
-    <div id="carrosel-imagens">
+    <!--carrossel-->
+    <div id="carrossel-imagens">
         <img src="./images/slide1.png" alt="Carro porsche">
         <img src="./images/slide2.png" alt="Carro BMW">
         <img src="./images/slide3.png" alt="Carro Ford">
@@ -194,29 +194,29 @@
 
     <!--sessão contato-->
 
-    <section>
+    <section id="contato">
         <div class="container">
             <h2>Entre em contato</h2>
         <form>
             <div class="form-campo"> <!--Campo nome-->
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome">
+                <input type="text" id="nome" name="nome">
             </div>
             <div class="form-campo"> <!--Campo Telefone-->
-                <label for="telefone">Telefone:</label>
-                <input type="tem" id="telefone">
+                <label for="telefone">Telefone (opicional):</label>
+                <input type="tel" id="telefone" name="telefone">
             </div>
             <div class="form-campo"> <!--Campo E-mail-->
                 <label for="email">E-mail:</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name="email">
             </div>
             <div class="form-campo"> <!--Campo veículo-->
                 <label for="veiculo-interesse">Veículo de interesse:</label>
-                <input type="text" id="veiculo-interesse">
+                <input type="text" id="veiculo-interesse" name="veiculoDeInteresse">
             </div>
             <div class="form-campo"> <!--Campo mensagem-->
                 <label for="veiculo-interesse">Mensagem:</label>
-                <textarea id="mensagem"></textarea>
+                <textarea id="mensagem" name="mensagem"></textarea>
             </div>
                 <button type="submit">Enviar</button> <!--botão enviar fomulário-->
         </form>
@@ -229,7 +229,7 @@
             <p>
             2023 &copy; EBAC Motors - Todos os direitos reservados.
             </p>
-            <ul class="container-flex"> <!--Lista de xoxo mídias-->
+            <ul class="container-flex"> <!--o container flex no ul permite com que os elementos sejam exibidos um ao lado do outro, ao inves de verticalmente.-->
                 <li>
                     <a href="#"> <!--link-->
                         <img src="./icones/facebook.png" alt="Icone facebook"> <!--imagem do link-->
@@ -251,25 +251,12 @@
 
 
 <!---------------------------------------------------->
-    <!--jquery-->
+    <!--jquery links e plugins-->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!--inicializador jquery-->
-    <script>
-        $(document).ready(function(){
-
-            /*efunção carrosel slick*/
-            $('#carrosel-imagens').slick({
-                autoplay: true,
-                arrows: false
-            });
-
-            /*Função exibir ou esconder o menu (nav) do menu hamburguer(spans) */
-            $('.menu-hamburguer').click(function(){
-                $('nav').slideToggle();
-            })
-        })
-    </script>
+    <script src="./js/jquery.mask.min.js"></script> <!--jQuery Mask Plugin-->
+    <script src="./js/jquery.validate.js"></script> <!--jQuery validate Plugin-->
+    <script src="./main.js"></script>
 </body>
 </html>
