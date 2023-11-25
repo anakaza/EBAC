@@ -1,22 +1,15 @@
 $(document).ready(function(){
 
-    /*função carrossel slick*/
-    $('#carrossel-imagens').slick({
-        autoplay: true,
-        arrows: false
-    });
+    /*Máscaras para o formulário.*/
+    $('#telefone').mask('(00) 00000-0000'),
+    $('#cpf').mask('000.000.000-00'),
+    $('#cep').mask('00000-000'),
+    $('#numero').mask('000000');
 
-    /*Função exibir ou esconder o menu (nav) do menu hamburguer(spans) */
-    $('.menu-hamburguer').click(function(){
-        $('nav').slideToggle();
-    })
+    /*Validação com jquery*/
 
-    /*Máscaras para o formulário. S = letras 0 = números*/
-    $('#telefone').mask('(00) 0 0000-0000')
-
-    /*Validação com jquery. Lembre-se que o Plugin utiliza a propriedade name="nome do input" */
     $('form').validate({
-        rules: {
+        rules:{
             nome: {
                 required: true
             },
@@ -26,49 +19,29 @@ $(document).ready(function(){
             telefone: {
                 required: true
             },
-            mensagem: {
+            cpf:{
                 required: true
             },
-            veiculoDeInteresse: {
-                required: false
-            }
+            cep:{
+                required: true
+            },
+            endereco:{
+                required: true
+            },
+            numero:{
+                required:true
+            }            
         },
-        messages: { /*Mensagens de erro para o usuário.*/
-            nome: 'Por favor, insira seu nome.',
-            telefone: 'Por favor, insira seu telefone celular.',
-            email: 'Por favor, insira o seu e-mail para contato.',
-            mensagem: 'Por favor, insira a sua mensagem.'
+        /*Mensagens de erro para o usuário.*/
+        messages: {
+            nome:'<span class="error-message">Por favor, insira o seu nome completo.</span>', /*<span class="error-message" utilizado para criar um estilo diferênciado para o aviso.>*/
+            email:'<span class="error-message">Por favor, insira seu e-mail.</span>',       
+            telefone:'<span class="error-message">Por favor, insira seu telefone para contato.</span>',
+            cpf:'<span class="error-message">Por favor, insira o cpf.</span>',
+            cep:'<span class="error-message">Por favor, insira o cep.</span>',
+            endereco:'<span class="error-message">Por favor, insira o endereço.</span>',
+            numero:'<span class="error-message">Por favor, insira o número do endereço.</span>',
         }
-
-        /*Disparar alerta - Interceptar o envio e do formulário invalido 
-
-        submitHandler: function(form){
-            console.log(form)
-        },
-        
-
-        invalidHandler: function(evento, validador){                            
-            let camposIncorretos = validador.numberOfInvalids();
-            if (camposIncorretos){
-                alert(`Existem ${camposIncorretos} campos incorretos.`)
-            }
-        } */
-        
-    }) /*Fim do $('form').validate({}) */
-
-    $('.lista-veiculos button').click(function(){
-        const destino = $('#contato');
-
-        /*Pega o elemento pai (parent) dentro deste elemento (lista veiculos) procura o texto dentro do elemento h3*/
-        const nomeVeiculo = $(this).parent().find('h3').text();
-
-        $('#veiculo-interesse').val(nomeVeiculo);   /*o 'Val' serve para recuperar ou definir 'setar' o valor*/
-
-        /*Animação e efeito de rolar a página na tag html*/
-        $('html').animate({
-            scrollTop: destino.offset().top  /*offset retorna a posição do elemento para sabermos o quão distante ela está do 'topo'.*/
-        }, 1000) /*Duração do efeito em ms*/
     })
-
 
 })
