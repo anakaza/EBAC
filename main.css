@@ -5,29 +5,46 @@
     font-family: sans-serif;
 }
 
-body {
-}
-
 .container {
-    margin: 80px auto;
-    max-width: 640px;
+    margin: 2em auto;
+    max-width: 25em;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 2em;
+    border-radius: 2em;
 }
-
+h1, h2{
+    text-align: center;
+    text-transform: uppercase;
+}
 form {
-    margin-top: 40px;
+    margin-top: 2em;
 }
 
 input, textarea, button {
     display: block;
-    padding: 8px;
-    margin-bottom: 8px;
+    padding: 0.5em;
+    margin-bottom: 0.8em;
     width: 100%;
     resize: none;
+    border: none;
+    border-radius: 0.2em;
+    font-size: 1em;
+}
+
+/*Remover setas numéricas*/
+form input[type="number"]::-webkit-inner-spin-button,
+form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+/*Remover setas numéricas mozila*/
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 button {
-    background-color: #2ecc71;
+    background-color: #000000;
     border: none;
     text-transform: uppercase;
     color: #fff;
@@ -35,10 +52,13 @@ button {
     font-size: 18px;
     font-style: italic;
     cursor: pointer;
+    width: 10em;
+    border-radius: 0.5em;
+    margin: 1.7em auto 0 auto;
 }
 
 button:hover {
-    background-color: #27ae60;
+    background-color: #000000e0;
 }
 
 .success-message{
