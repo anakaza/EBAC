@@ -7,10 +7,12 @@
 
 .container{
     display: flex;
-    max-width: 100%;
-    width: 30em;
-    margin: 0 auto;
-    justify-content: center;
+    max-width: 18em;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 2em;
+    margin: 2em auto 0 auto;
+    border-radius: 2em;
 }
 
 h2{
@@ -19,11 +21,10 @@ h2{
     text-transform: uppercase;
 }
 form{
-    padding: 1em;
-    margin-top: 3em;
+    margin: 0 auto;
 }
 input{
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     width: 10em;
 }
 input, button{
@@ -34,23 +35,18 @@ input, button{
 }
 button{
     cursor: pointer;
-    background-color: blue;
-    color: aliceblue;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 600;
     width: 1.5em;
 }
-#btn-adicionar:hover{
-    background-color: rgb(255, 0, 0);
-    color: black;
-}
-#btn-desfazer:hover{
-    background-color: blueviolet;
-    color: rgb(0, 0, 0);
+#btn-adicionar:hover,#btn-desfazer:hover{
+    background-color: rgba(0, 0, 0, 0.733);
+
 }
 
-.container2{
-    max-height: 10em;
-    padding: 1em;
+#lista-tarefa{
+    margin-top: 1em;
 }
 ul{
     display: center;
@@ -72,11 +68,11 @@ li:hover{
     opacity: 0.5;
     font-weight: 100;
 }
+
 .concluido{
     opacity: 0.5;
     text-decoration: line-through;
 }
-
 .fazer{
     opacity: 1;
 }
