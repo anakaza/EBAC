@@ -4,24 +4,16 @@
     box-sizing: border-box;
 }
 
-.container, h1{
-    display: flex;
+.box{
+    background-color: black;
+    padding: 2em;
     justify-content: center;
     text-align: center;
     margin-bottom: 20px;
-}
-h1{
-    margin-top: 5em;
-}
-.container{
     width: 100%;
-    flex-direction: row;
-    margin-bottom: 28px;
-}
-
-.box{
-    height: 20em;
-    width: 20em;
+    margin-bottom: 2em;
+    width: 25em;
+    margin: 2em auto 0 auto;
 }
 
 input, button, span{
@@ -31,6 +23,18 @@ input{
     width: 24em;
     margin: 0.5em 0;
 }
+
+/*Remover setas numéricas*/
+form input[type="number"]::-webkit-inner-spin-button,
+form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+/*Remover setas numéricas mozila*/
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 button{
     background-color: black;
     color: #fff;
