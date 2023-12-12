@@ -1,0 +1,249 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Familjen Grotesk', sans-serif;
+}
+
+.container{
+    max-width: 64em;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header{
+    padding-top: 1em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1.5em;
+}
+
+/*Menu*/
+.menu > li{ /* '>' indica que o efeito é aplicado apenas no 'li' do 'menu'*/
+    float: left; /*Traz o efeito de um item ao lado do outro*/
+    list-style: none;
+    padding: 1em;
+    position: relative; /*Impede que o submenu ultrapasse o espaço do 'li' do menu.*/
+    width: 6em;
+    border-top: 4px solid transparent;
+}
+.menu li:hover{
+    border-color:rebeccapurple; /*Adicionando essa propriedade o botão não se desloca ao passar o mouse*/
+}
+.clear {
+    clear: both; /*Corrigindo a falta de espaçamento causado pelo float*/
+}
+.menu h4{
+    font-weight: 400;
+    font-size: 1.2em;
+    text-align: center;
+}
+button{
+    margin-top: 2em;
+    padding: 0.4em;
+    border-radius: 0.3em;
+    border: none;
+    background-color: black;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1em;
+    font-size: 1em;
+    text-align: center;
+}
+.src-bar{
+    padding: 0.5em 0;
+    border-radius: 0.3em;
+    border-style: solid;
+}
+.btn-menu{
+    display: none;
+}
+
+
+/*Submenu*/
+.submenu{
+    background-color: #efefef;
+    border-radius: 0.1em;
+    display: none;
+    position: absolute; /*Não desloca os elementos ao redor ao surgir*/
+    max-width: 100%;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+.submenu li{
+    display: block;
+    padding: 0.5em;
+    font-weight: 400;
+    text-align: center;
+}
+.menu li:hover .submenu{
+    display: block; /*faz com que o submenu apareça quando o mouse passar pelos itens do menu*/
+}
+.submenu li a{
+    text-decoration: none;
+    color: rebeccapurple;
+}
+
+
+/*conteudo do site*/
+.conteudo{
+    display: grid; /*Quando se usa grid trabalhamos com colunas e linhas*/
+    grid-template-columns: 70% 30%; /*difinição em % do espaçamento da grid*/
+    padding: 1em;
+}
+
+
+
+
+
+/*Destaque*/
+.destaque{
+    margin-bottom: 1em;
+}
+.destaque .noticia a{
+    display: flex; /*Exibi o texto ao lado da imagem*/
+    font-size: 2em;
+}
+.destaque .noticia img{
+    margin-right: 0.5em;
+}
+
+/*Noticias*/
+.noticias{
+    display: grid;
+    grid-template-columns: repeat(3, 32.6%); /*divisão das colunas*/
+    column-gap: 1%; /*espaçamento entre as colunas*/
+    row-gap: 5%; /*espaçamento entra as linhas*/
+}
+.noticia img{
+    max-width: 100%; /*Remove o scroll horizontal*/
+}
+section h2{
+    margin-bottom: 1em;
+}
+
+
+/*Nocidades laterais*/
+aside{
+    padding-left: 2em;
+}
+aside .noticia{
+    margin-bottom: 1.5em;
+}
+
+
+
+/*responsividade celular até 767 px*/
+
+@media screen and (max-width: 767px){
+    .conteudo{
+        display: block; /*Alterado de grid para block, para comtemplar a tela no modo retrato*/
+
+    }
+    .container{
+        max-width: 90%;
+
+    }
+
+
+    /*Destaque*/
+    .destaque .noticia a{
+        display: block; /*Alterado de grid para block, para comtemplar a tela no modo retrato*/
+        font-size: 1.5em;
+    }
+    .destaque .noticia img{
+        margin-right: 0;
+    }
+
+    /*Noticias*/
+    .noticias{
+        display: block; /*Alterado de grid para block, para comtemplar a tela no modo retrato*/
+    }
+    .noticias .noticia{
+        margin-bottom: 2em;
+    }
+
+    /*Nocidades laterais*/
+    aside{
+        padding-left: 0em;
+    }
+    aside .noticia{
+        margin-bottom: 1.5em;
+    }
+
+    /*Header*/
+    header div.container{
+        flex-direction: column; /*alterando a oritenação pedrão do flex box (linhas) para colunas*/   
+    }
+    .header{
+        padding-top: 1em;
+        margin-bottom: 0;
+    }
+
+
+    /*Menu*/
+    .menu{
+        display: none;
+    }
+    .menu > li{ /* '>' indica que o efeito é aplicado apenas no 'li' do 'menu'*/
+        clear: both; /*Remove o efeito do float*/
+    }
+
+    .menu h4{
+        font-weight: 400;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+
+    /*Submenu*/
+    .submenu{
+        background-color: #efefef00;
+        display: block;
+        position: relative;
+    }
+    .submenu li{
+        display: block;
+        padding: 0.5em;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .submenu li a{
+        text-decoration: none;
+        color: rebeccapurple;
+    }
+
+    .btn-menu{
+        display: flex;
+        justify-content: center;
+    }
+    .btn-menu button{
+        padding: 1em;
+        font-size: 1em;
+    }
+
+}
+
+
+
+
+
+
+@media  screen and (min-width: 768px) and (max-width: 1023px) {
+    .container{
+        max-width: 90%;
+    }
+    .destaque .noticia a{
+        font-size: 1.5em;
+    }
+    .noticias{
+        grid-template-columns: repeat(2, 49%); /*divisão das colunas*/
+    }
+
+}
