@@ -4,14 +4,36 @@ html, body {
     }
     .container{
     max-width: 1200px;
-    padding: 0.5em 0;
     }
+
+    /* Navbar*/
     header{
+        /*
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+        */
         border-bottom: 1px solid #ccc;
-        padding-bottom: 1em;
+        background-color: #f8f9fa;
+        padding: 0.5em;
     }
+    .navbar-nav .nav-link.active{
+        color: #fff;
+    }
+    .nav-link{
+        text-align: center;
+    }
+    .hdr-ctn{
+        align-items: center;
+    }
+    .dropdown-item a{
+        color: black;
+    }
+
+
     .titulo{
-        margin-bottom: 0.5em;
+        margin-top: 0.5em;
     }
     .card{
         height: 100%;
@@ -63,13 +85,15 @@ html, body {
 
     /*Carousel*/
     .carousel img{
-        height: 50em;
+        height: 45em;
         object-fit: cover;
     }
 
     /*Modal*/
     .md-btn{
+        height: 10em;
         width: 100%;
+        margin-bottom: 1em;
     }
     .ctn-modal h6{
         font-size: 2em;
@@ -77,5 +101,5 @@ html, body {
 
 
     footer{
-        padding: 4em 0em 0 0 ;
+        padding-top: 1em;
     }
