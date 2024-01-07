@@ -1,54 +1,57 @@
-html, body {
-    height: 100%; /* Faz com que o html e o body ocupem a altura total da tela */
-    margin: 0; /* Remove as margens padrão */
-    }
-    .container{
+.container{
     max-width: 1200px;
-    }
+    padding: 0 1em;
+}
+.ctn2{
+    height: 85vh;
+}
+header{
+    border-bottom: 1px solid #ccc;
+    background-color: #f8f9fa;
+    padding: 0.5em 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.navbar-nav .nav-link.active{
+    color: #fff;
+}
+.nav-link{
+    text-align: center;
+}
 
-    /* Navbar*/
-    header{
-        /*
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 999999;
-        */
-        border-bottom: 1px solid #ccc;
-        background-color: #f8f9fa;
-        padding: 0.5em;
-    }
-    .navbar-nav .nav-link.active{
-        color: #fff;
-    }
-    .nav-link{
-        text-align: center;
-    }
-    .hdr-ctn{
-        align-items: center;
-    }
-    .dropdown-item a{
-        color: black;
-    }
+section{
+    margin-top: 1em;
+}
 
-
-    .titulo{
-        margin-top: 0.5em;
-    }
-    .card{
-        height: 100%;
-    }
+.card {
+    height: 475px;
+    display: flex;
+    flex-direction: column;
+}
     .card-header{
         text-transform: uppercase;
     }
     /*Lembrar dessa configuração para imagens de tamanho diferentes*/
-    .card img { 
+    .card img {
         object-fit: cover;
-        width: 100%; /* Preenche toda a largura do card */
-        height: 400px; /* Altura fixa para todas as imagens */
+        width: 100%;
+        height: 100%; /* Altura fixa para a imagem dentro do card */
+    }
+    .img-pc {
+        max-width: 100%;
+        height: auto;
+    }
+    .tab-content{
+        padding: 1em;
+        display: flex;
     }
 
     /*Card overlay correção*/
+    .card .card-img-overlay {
+        flex: 1; /*ocupa o restante da altura do card */
+    }
     .card.img-bg{
         position: relative;
         color: #fff;
@@ -61,7 +64,7 @@ html, body {
         object-fit: cover;
     }
     .card.img-bg .card-img-overlay{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         display: flex;
         flex-direction: column;
         justify-content: end;
@@ -78,28 +81,49 @@ html, body {
         margin-top: 1em;
         padding: 0;
     }
-    .blocos{
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 1em;
-    }
 
     /*Carousel*/
     .carousel img{
-        height: 45em;
+        height: 100%;
         object-fit: cover;
     }
 
     /*Modal*/
     .md-btn{
-        height: 10em;
+        margin-top: 1em;
+        height: 35em;
         width: 100%;
-        margin-bottom: 1em;
     }
-    .ctn-modal h6{
-        font-size: 2em;
+    .md-btn h6{
+        font-size: 1.5em;
+    }
+    .modal-img{
+        width: 100%;
+    }
+    .pd-tp{
+
     }
 
+    /*Tabs*/
+    .tab-content-2 img {
+        max-width: 100%; /* faz com que a imagem não exceda a largura do container */
+        height: auto; /* mantém a proporção da imagem */
+        display: block; /* remove qualquer espaço extra abaixo da imagem */
+        margin: 0 auto; /* centraliza a imagem se ela for menor que o container */
+    }
 
-    footer{
-        padding-top: 1em;
+    /*Dropdown*/
+
+    .Dropdown { 
+        position: relative; /*Altera o dropdown de absolute, que é o padrão, para relative.*/
+    }
+    
+    .custom-dropdown-menu {
+        top: 100%;  /*Alinha o top do menu dropdown com a parte inferior do botão dropdown*/
+        left: 0; /*Alinha o menu à esquerda do elemento pai.*/
+    }
+
+    /*Toast*/
+    .toast img{
+        width: 100%;
     }

@@ -3,424 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modulo 13 - aula</title>
+    <title>Bootstrap</title>
     <link rel="stylesheet" href="/lib/bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
+    <style>
+        body{
+            background-color: #f8f9fa;
+        }
+        .dst-alt {
+            height: 90vh;
+            max-width: 1200px;
+        }
+        footer{
+            padding: 1em 0;
+        }
+        .dropdown button,
+        .dropdown-menu{
+            padding: 0 1em;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
-<!--Cabeçalho-->
-    <header>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col d-flex justify-content-start">
-                    <h1 class="h2">Bootstrap</h1>
-                </div>
-                <div class="col d-flex justify-content-end col-auto">
-                    <nav>
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="text-dark nav-link active fw-semibold" href=".#card">Cards</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="text-dark nav-link active fw-semibold" href="#carousel">Carousel</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="text-dark nav-link active fw-semibold" href="#modal">Modal</a>
-                            </li>
-    
-    
-                            <!--dropdown-->
-                            <li class="nav-item">
-                                <div>
-                                    <div class="dropdown">
-                                        <button class="btn btn-light dropdown-toggle fw-semibold" data-bs-toggle="dropdown">
-                                            Dropdown
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-item">
-                                                <a class="nav-link" href="#">Menu dropdown</a>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <a class="nav-link" href="#">Menu dropdown</a>
-                                            </li>
-                                            <li class="dropdown-item">
-                                                <a class="nav-link" href="#">Menu dropdown</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-    
-    
-    
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        
-    </header>
-
-<!--    Cabeçalho navbar
-<header>
-    <div class="container hdr-ctn">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+<div class="container-fluid dst-alt d-flex justify-content-center align-items-center item">
+        <div class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle fs-1 " data-bs-toggle="dropdown">
+                Bootsrap
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#card">Cards</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#modal">Modal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#carousel">Carousel</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Menu dropdown</a></li>
-                                <li><a class="dropdown-item" href="#">Menu dropdown</a></li>
-                                <li><a class="dropdown-item" href="#">Menu dropdown</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="dropdown-menu text-center">
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./index1.html">Módulo 13 - Aula</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="#">Módulo 13 - Tarefa</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </div>
-</header>
-
-<div data-bs-spy="scroll">
-
--->
-
-<!--Cards-->
-<div id="card" class="container blocos">
-    <div class="row">
-        <h1 class="titulo h3">Cards</h1>
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <article class="card">
-                <div class="card-header">
-                    cabeçalho do header
-                </div>
-                <img src="https://via.placeholder.com/1000x1000" alt="placeholder img">
-                <div class="card-body">
-                    <h5 class="card-tittle">Título do card</h5>
-                    <h6 class="card-subtitle"> Subtítulo do card</h6>
-                    <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempora non dignissimos consequatur minus blanditiis autem, suscipit voluptatem aspernatur dolor architecto animi officiis cupiditate eius officia neque id dolorum provident.</p>
-                    <a href="#" class="btn btn-primary">Botão Link</a>
-                </div>
-                <footer class="card-footer">
-                    Postado em <time>02/01/2024 ás 16:00</time>
-                </footer>
-            </article>
         </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <article class="card text-bg-dark">
-                <div class="card-header">
-                    local img card + DM
-                </div>
-                <img src="/img/00.jpg" alt="placeholder img">
-                <div class="card-body">
-                    <h5 class="card-tittle">Título do card</h5>
-                    <h6 class="card-subtitle"> Subtítulo do card</h6>
-                    <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempora non dignissimos consequatur minus blanditiis autem, suscipit voluptatem aspernatur dolor architecto animi officiis cupiditate eius officia neque id dolorum provident.</p>
-                    <a href="#" class="btn btn-primary">Botão Link</a>
-                </div>
-                <footer class="card-footer">
-                    Postado em <time>02/01/2024 ás 16:00</time>
-                </footer>
-            </article>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <article class="card text-bg-dark img-bg">
-                <div class="card-header">
-                    cabeçalho do header
-                </div>
-                <img src="/img/01.jpg" alt="placeholder img">
-                <div class="card-img-overlay">
-                    <h5 class="card-tittle">Título do card</h5>
-                    <h6 class="card-subtitle"> Subtítulo do card</h6>
-                    <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempora non dignissimos consequatur minus blanditiis autem, suscipit voluptatem aspernatur dolor architecto animi officiis cupiditate eius officia neque id dolorum provident.</p>
-                    <a href="#" class="btn btn-primary">Botão Link</a>
-                    <footer class="card-footer cf2"> <!--Não consegui posicionar como os demais-->
-                        Postado em <time>02/01/2024 ás 16:00</time>
-                    </footer>
-                </div>
-            </article>
-        </div>
-
-    </div>
 </div>
 
-<!--carousel-->
-<div id="carousel" class="container blocos">
-    <div class="row">
-    
-        <h1 class="titulo h3">Carousel</h1>
-    
-        <div class="col-3">
-    
-            <div class="carousel slide" data-bs-ride="carousel">
-    
-                <div class="carousel-inner">
-                    <h5>Carousel - Legenda</h5>
-                    <div data-bs-interval="3000" class="carousel-item active">
-                        <img class="d-block w-100" src="/img/c-00.jpg" alt="jp-00">
-                        <div class="carousel-caption">
-                            <h5>Legenda</h5>
-                        </div>
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-01.jpg" alt="jp-01">
-                        <div class="carousel-caption">
-                            <h5>Legenda</h5>
-                        </div>
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-02.jpg" alt="jp-02">
-                        <div class="carousel-caption">
-                            <h5>Legenda</h5>
-                        </div>
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-03.jpg" alt="jp-03">
-                        <div class="carousel-caption">
-                            <h5>Legenda</h5>
-                        </div>
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-04.jpg" alt="jp-04">
-                        <div class="carousel-caption">
-                            <h5>Legenda</h5>
-                        </div>
-                    </div>
-    
-                </div>
-            </div>
-        </div>
-    
-        <div class="col-3">
-    
-            <div class="carousel carousel-fade slide" data-bs-ride="carousel">
-    
-                <div class="carousel-inner">
-                    <h5>Carousel - Fade </h5>
-                    <div data-bs-interval="3000" class="carousel-item active">
-                        <img class="d-block w-100" src="/img/c-00.jpg" alt="jp-00">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-01.jpg" alt="jp-01">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-02.jpg" alt="jp-02">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-03.jpg" alt="jp-03">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-04.jpg" alt="jp-04">
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    
-    
-        <div class="col-3">
-    
-            <div id="carousel-exp2" class="carousel slide" data-bs-ride="carousel">
-    
-                <div class="carousel-inner">
-                    <h5>Carousel - indicadores</h5>
-                    <div data-bs-interval="3000" class="carousel-item active">
-                        <img class="d-block w-100" src="/img/c-00.jpg" alt="jp-00">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-01.jpg" alt="jp-01">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-02.jpg" alt="jp-02">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-03.jpg" alt="jp-03">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-04.jpg" alt="jp-04">
-                    </div>
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="carousel-exp2" class="active" data-bs-slide-to="0"></button>
-                        <button type="button" data-bs-target="carousel-exp2" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="carousel-exp2" data-bs-slide-to="2"></button>
-                        <button type="button" data-bs-target="carousel-exp2" data-bs-slide-to="3"></button>
-                        <button type="button" data-bs-target="carousel-exp2" data-bs-slide-to="4"></button>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    
-    
-        <div class="col-3">
-    
-            <div id="carousel-exp" class="carousel slide" data-bs-ride="carousel">
-    
-                <div class="carousel-inner">
-                    <h5>Carousel - sliders buttons</h5>
-                    <div data-bs-interval="3000" class="carousel-item active">
-                        <img class="d-block w-100" src="/img/c-00.jpg" alt="jp-00">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-01.jpg" alt="jp-01">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-02.jpg" alt="jp-02">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-03.jpg" alt="jp-03">
-                    </div>
-                    <div data-bs-interval="3000" class="carousel-item">
-                        <img class="d-block w-100" src="/img/c-04.jpg" alt="jp-04">
-                    </div>
-                </div>
-                <button  data-bs-target="#carousel-exp" data-bs-slide="prev" class="carousel-control-prev" type="button">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button  data-bs-target="#carousel-exp" data-bs-slide="next" class="carousel-control-next" type="button">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-        </div>
-    
-    </div>
-    </div>
-
-</div>
-
-<!-- Modal ou popout -->
-<div id="modal" class="container ctn-modal blocos">
-    <div class="row">
-    <h1 class="titulo h3">Modais</h1>
-    
-    <div class="col-4">
-        <button class="md-btn btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-exp0">
-            <h6>Modal padrão</h6>
-        </button>
-            <div class="modal" id="modal-exp0">
-                <div class="modal-dialog"> 
-                    <div class="modal-content">
-        
-                        <div class="modal-header">
-                            <h5>Título do modal</h5>
-                        </div>
-        
-                        <div class="modal-body">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Expedita at laudantium
-                                illo, sequi quibusdam sed suscipit eius eos, 
-                                qui, sapiente reprehenderit deserunt.
-                                Iusto modi enim reprehenderit et, nostrum optio magni.
-                            </p>
-                        </div>
-        
-                        <div class="modal-footer">
-                            rodapé da modal
-                        </div>
-        
-                    </div>
-                </div>
-            </div>
-    </div>
-    <div class="col-4">
-                
-        <button class="md-btn btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-exp1">
-            <h6>Modal estático</h6>
-        </button>
-            <div class="modal" id="modal-exp1" data-bs-backdrop="static">
-                <div class="modal-dialog"> 
-                    <div class="modal-content">
-        
-                        <div class="modal-header">
-                            <h5>Este modal será fechado após 3 segundos</h5>
-                        </div>
-        
-                        <div class="modal-body">
-                            <p>
-                                "Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Expedita at laudantium
-                                illo, sequi quibusdam sed suscipit eius eos, 
-                                qui, sapiente reprehenderit deserunt.
-                                Iusto modi enim reprehenderit et, nostrum optio magni."
-                            </p>
-                        </div>
-        
-                        <div class="modal-footer">
-                            rodapé da modal
-                        </div>
-        
-                    </div>
-                </div>
-            </div>
-    </div>
-    
-    <div class="col-4">
-                
-        <button class="md-btn btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-exp2">
-            <h6>Modal com botões</h6>
-        </button>
-            <div class="modal" id="modal-exp2" data-bs-backdrop="static">
-                <div class="modal-dialog"> 
-                    <div class="modal-content">
-        
-                        <div class="modal-header">
-                            <h5>Título da modal</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-        
-                        <div class="modal-body">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Expedita at laudantium
-                                illo, sequi quibusdam sed suscipit eius eos, 
-                                qui, sapiente reprehenderit deserunt.
-                                Iusto modi enim reprehenderit et, nostrum optio magni.
-                            </p>
-                        </div>
-        
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
-                        </div>
-        
-                    </div>
-                </div>
-            </div>
-    </div>
-    
-    </div>
-    </div>
-
-<!--footer-->
+    <!--footer-->
 <div class="container">
     <footer>
         <div class="row align-items-center">
-            <div class="col d-flex justify-content-end">
+            <div class="col d-flex justify-content-center">
                 <p>&copy; 2023 lOl - Todos os direitos reservados.</p>
             </div>
         </div>
@@ -430,37 +57,6 @@
 
     <script src="/lib/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!--
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const exibirModal = new bootstrap.Modal('#modal-exp0');
-            exibirModal.show();
-        })
-    </script>
-    -->
-
-    <!--
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const exibirModal = new bootstrap.Modal('#modal-exp0');
-            setTimeout(function(){
-                exibirModal.show();
-            }, 3000)
-        })
-    </script>
-    -->
-    <script>
-        $(document).ready(function () {
-            $('#modal-exp1').on('shown.bs.modal', function () {
-                setTimeout(function () {
-                    $('#modal-exp1').modal('hide');
-                }, 3000);
-            });
-        });
-    </script>
-
-
 
 </body>
 </html>
