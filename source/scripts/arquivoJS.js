@@ -1,0 +1,1 @@
+//teste de arquivo js para compressão
