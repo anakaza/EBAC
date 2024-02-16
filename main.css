@@ -4,169 +4,65 @@
     box-sizing: border-box;
     font-family: 'Familjen Grotesk', sans-serif;
 }
+
 .container{
-    max-width: 1024px;
+    max-width: 20em;
     width: 100%;
     margin: 0 auto;
+    margin-top: 3em;
+    background-color: rgba(0, 0, 0, 0.068);
+    padding: 2em;
+    border-radius: 2em;
 }
-.container-flex{
-    display: flex;
-}
-
-header{
-    background-color: #192a56;
-    color: #fff;
-    position: sticky; /*Manter o cabeçalho grudado, acompanhando a rolagem.*/
-    top: 0; /*Posição de referência para fixação*/
-    left: 0; /*Posição de referência para fixação*/
-    /*Como o carrossel tem um posição relative acontece uma concorrência de exibição na página, um cobrindo o outro*/
-    z-index: 1; /*Coloca o carrossel numa layer a frente do restante. O z-index define a ordem d emepilhamento em um documento html em formato de pilha.*/
-} 
-header > .container{
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 0;                                 /*Colocando o padding aqui conseguimos remover a margem do padding*/
-}
-.menu-hamburguer{
-    width: 2em;
-    cursor: pointer;
-}
-.menu-hamburguer span{
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    display: block;
-    margin-bottom: 4px;
-
-}
-
-/*Menu do menu hamburguer*/
-nav{
-    background-color: #575fcf;
-    padding: 1em 0;
-    display: none;
-}
-nav li{
-    list-style: none;
-    display: inline;
-    margin-right: 1em;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-nav li a{
-    color: #fff;
-    text-decoration: none;
-}
-
-
-/*Sections*/
-section{
-    padding: 3em 0 1em 0;
-}
-section h2{
-    margin-bottom: 1em;
-}
-section p{
+.container h2{
     margin-bottom: 1em;
 }
 
-#sobre-loja img{
-    max-width: 24em;
-    margin-right: 2em;
-}
-
-/*
-    .lista-veiculos {
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    Utilizar o justify content com o flex wrap faz com que existam lacunas dentro do ul
-*/
-
-
-.lista-veiculos{
-    flex-wrap: wrap; /**/
-}
-.item-central{
-    margin: 0 5%; /*Adicionamos essa classe aos itens centrais para que ele ocupe e distribuo o espaço dos 100% evitando lacunas.*/
-} 
-.lista-veiculos li{
-    list-style: none;
-    max-width: 30%;
-    margin-bottom: 2em;
-}
-.lista-veiculos li img{ /*MW em 100% mantem a imagem em 100% do espaço definito parar o li (30%) do seu container.*/
-    max-width: 100%;
-}
-.lista-veiculos li h3{
-    margin: 0.5em 0;
-}
-.price{
-    margin-bottom: 1em;
-    display: block; /*Necessário aplicar display block parar aplicar o espaçamento (top/bot)*/
-}
-.price del{
-    opacity: 0.5;
-    font-size: 0.9em;
-}
-button{
-    display: block; /*Alterado para block para que o botão seja exibido a baixo e possa ocupar 1005 do espaço definido.*/
-    width: 100%;
-    padding: 0.5em 0;
-    border: none;
-    background-color:#119759 ;
-    color: #fff;
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 0.3em;
-}
-
-
-/*Formulário*/
 form{
-    max-width: 20em;
+    max-width: 18em;
 }
 .form-campo{
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 .form-campo label{
-    font-weight: 700;
-    display: block; /*'Label' e 'Campo' em linhas diferentes.*/
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
+    display: block;
+    font-weight: 600;
 }
-.form-campo input,
-.form-campo textarea{
+.form-campo input{
     width: 100%;
     display: block;
     padding: 0.5em;
+    border-radius: 0.2em;
+    border: none;
 }
-.form-campo textarea{
-    resize: none;
-    height: 7em;
+/*Remover setas numéricas*/
+form input[type="number"]::-webkit-inner-spin-button,
+form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
 }
+/*Remover setas numéricas mozila*/
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 form button{
-    max-width: 5em;
+    width: 100%;
     align-items: center;
-}
-
-
-/*Footer*/
-footer{ /*Footer pode ser aplicado diretamente no header, economizando linhas de código.*/
-    background-color: #192a56;
+    margin-top: 1em;
+    padding: 0.5em;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(0, 0, 0);
     color: #fff;
-    padding: 1em 0 0.6em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
 }
-footer li{
-    list-style: none;
-    margin-left: 2em;
-}
-footer li img{
-    height: 2em;
-}
-footer .container{
-    justify-content: space-between; /*espaçar o texto dos links*/
-    align-items: center;
-    display: flex;
+/*classe para aplicar um estilo ao span das mensagens js*/
+.error-message{
+    color: rgb(255, 0, 0);
+    font-weight: 500;
+    font-size: 0.8em;
+    opacity: 0.7;
 }

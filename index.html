@@ -9,252 +9,53 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
-    <title>Modulo 10 - Ebac Motors</title>
+    <title>modulo_10_tarefa - Exercicio plugins jquery</title>
 </head>
 <body>
-    
-    <header>
-        <div class="container container-flex">  <!--classe secundária para manter a formatação do container-->
-            <h1>EBAC Motors</h1>
-            <!--Menu hamburguer-->
-            <div class="menu-hamburguer">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <!--Menu hamburguer-->
-        </div>
-        <nav>
-            <div class="container">
-                <ul>
-                    <li>
-                        <a href="#">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="#">Em destaque</a>
-                    </li>
-                    <li>
-                        <a href="#">Promoções</a>
-                    </li>
-                    <li>
-                        <a href="#">Contato</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <!--carrossel-->
-    <div id="carrossel-imagens">
-        <img src="./images/slide1.png" alt="Carro porsche">
-        <img src="./images/slide2.png" alt="Carro BMW">
-        <img src="./images/slide3.png" alt="Carro Ford">
-    </div>
-
-    <!--sessão sobre-->
-    <section id="sobre-loja">
-        <div class="container container-flex">  <!--Classe secundária para posicionar os textos ao lado a imagem-->
-            <img src="./images/loja.jpg" alt="Imagem da loja EBAC mortos">
-            <div> <!--div para manter o texto num bloco só ao inves de colunas-->
-                <h2>Sobre a EBAC Motors</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, illo magni aliquid perspiciatis consequatur nostrum repellat et aperiam enim, tempora, voluptatibus alias maxime minima laboriosam suscipit dicta modi natus eum!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam adipisci amet illum non eligendi iste consequuntur exercitationem, consequatur quae fugit alias omnis natus ipsam nostrum fugiat dicta molestiae officia deserunt!</p>
-            </div>
-        </div>
-    </section>
-
-    <!--sessão destaque-->
-
+    <!--formulário-->
     <section>
         <div class="container">
-            <h2>Em destaque</h2>
-            <ul class="container-flex lista-veiculos"> <!--O container-flex nos permite manter os elementos da lista um ao lado do outro-->
-
-                    <li>
-                    <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                    <!--titulo--><h3> Carro BMW</h3> 
-                    <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                    <!--preço--><div class="price"> 
-                                <strong> R$ 75.000,00</strong>
-                                </div>
-                    <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-                    <li class="item-central">
-                        <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                        <!--titulo--><h3> Carro BMW</h3> 
-                        <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                        <!--preço--><div class="price"> 
-                                    <strong> R$ 75.000,00</strong>
-                                    </div>
-                        <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-                    <li>
-                        <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                        <!--titulo--><h3> Carro BMW</h3> 
-                        <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                        <!--preço--><div class="price"> 
-                                    <strong> R$ 75.000,00</strong>
-                                    </div>
-                        <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-                    <li>
-                        <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                        <!--titulo--><h3> Carro BMW</h3> 
-                        <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                        <!--preço--><div class="price"> 
-                                    <strong> R$ 75.000,00</strong>
-                                    </div>
-                        <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-                    <li class="item-central">
-                        <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                        <!--titulo--><h3> Carro BMW</h3> 
-                        <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                        <!--preço--><div class="price"> 
-                                    <strong> R$ 75.000,00</strong>
-                                    </div>
-                        <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-            </ul>
+            <h2>Cadastre-se</h2>
+            <form>
+                <div class="form-campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                <div class="form-campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Insira apenas os números">
+                </div>
+                <div class="form-campo">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Insira apenas os números">
+                </div>
+                <div class="form-campo">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" placeholder="Insira apenas os números">
+                </div>
+                <div class="form-campo">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco">
+                </div>
+                <div class="form-campo">
+                    <label for="numero">numero do endereço</label>
+                    <input type="text" id="numero" name="numero">
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
         </div>
     </section>
 
 
-    <!--sessão Promoção-->
-
-    <section>
-        <div class="container">
-            <h2>Promoções</h2>
-            <ul class="container-flex lista-veiculos"> <!--O container-flex nos permite manter os elementos da lista um ao lado do outro-->
-
-                    <li>
-                    <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                    <!--titulo--><h3> Carro BMW</h3> 
-                    <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                                <div class="price">
-                    <!--preço antigo--><del>R$ 100.000,00</del> <!--Del para manter o texto lado a lado, numa tag p ou div os valores ficam posicionados um acima do outro-->
-                    <!--preço desconto--><strong> R$ 75.000,00</strong>
-                                </div>
-                    <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-                    <li class="item-central">
-                        <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                        <!--titulo--><h3> Carro BMW</h3> 
-                        <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                                    <div class="price">
-                        <!--preço antigo--><del>R$ 100.000,00</del>  <!--Del para manter o texto lado a lado, numa tag p ou div os valores ficam posicionados um acima do outro-->
-                        <!--preço desconto--><strong> R$ 75.000,00</strong>
-                                    </div>
-                        <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-                    <li>
-                        <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                        <!--titulo--><h3> Carro BMW</h3> 
-                        <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                                    <div class="price">
-                        <!--preço antigo--><del>R$ 100.000,00</del> <!--Del para manter o texto lado a lado, numa tag p ou div os valores ficam posicionados um acima do outro-->
-                        <!--preço desconto--><strong> R$ 75.000,00</strong>
-                                    </div>
-                        <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-                    <li>
-                        <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                        <!--titulo--><h3> Carro BMW</h3> 
-                        <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                                    <div class="price">
-                        <!--preço antigo--><del>R$ 100.000,00</del> <!--Del para manter o texto lado a lado, numa tag p ou div os valores ficam posicionados um acima do outro-->
-                        <!--preço desconto--><strong> R$ 75.000,00</strong>
-                                    </div>
-                        <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-                    <li class="item-central">
-                        <!--imagem--><img src="./images/carro-bmw.png" alt="Carro bmw">  
-                        <!--titulo--><h3> Carro BMW</h3> 
-                        <!--descrção--><p> Câmbio automático, 4 portas, vidros e travas eletétricas.</p>
-                                    <div class="price">
-                        <!--preço antigo--><del>R$ 100.000,00</del> <!--Del para manter o texto lado a lado, numa tag p ou div os valores ficam posicionados um acima do outro-->
-                        <!--preço desconto--><strong> R$ 75.000,00</strong>
-                                    </div>
-                        <!--botão--><button type="button">Tenho interesse</button>
-                    </li>
-
-            </ul>
-        </div>
-    </section>
-
-    <!--sessão contato-->
-
-    <section id="contato">
-        <div class="container">
-            <h2>Entre em contato</h2>
-        <form>
-            <div class="form-campo"> <!--Campo nome-->
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
-            </div>
-            <div class="form-campo"> <!--Campo Telefone-->
-                <label for="telefone">Telefone (opicional):</label>
-                <input type="tel" id="telefone" name="telefone">
-            </div>
-            <div class="form-campo"> <!--Campo E-mail-->
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email">
-            </div>
-            <div class="form-campo"> <!--Campo veículo-->
-                <label for="veiculo-interesse">Veículo de interesse:</label>
-                <input type="text" id="veiculo-interesse" name="veiculoDeInteresse">
-            </div>
-            <div class="form-campo"> <!--Campo mensagem-->
-                <label for="veiculo-interesse">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem"></textarea>
-            </div>
-                <button type="submit">Enviar</button> <!--botão enviar fomulário-->
-        </form>
-        </div>
-    </section>
-
-    <!--footer-->
-    <footer>
-        <div class="container container-flex">
-            <p>
-            2023 &copy; EBAC Motors - Todos os direitos reservados.
-            </p>
-            <ul class="container-flex"> <!--o container flex no ul permite com que os elementos sejam exibidos um ao lado do outro, ao inves de verticalmente.-->
-                <li>
-                    <a href="#"> <!--link-->
-                        <img src="./icones/facebook.png" alt="Icone facebook"> <!--imagem do link-->
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./icones/instagram.png" alt="Icone instagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./icones/youtube.png" alt="Icone youtube">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
-
-<!---------------------------------------------------->
+    <!---------------------------------------------------->
     <!--jquery links e plugins-->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/jquery.mask.min.js"></script> <!--jQuery Mask Plugin-->
     <script src="./js/jquery.validate.js"></script> <!--jQuery validate Plugin-->
     <script src="./main.js"></script>
