@@ -1,147 +1,126 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
-
-
+/*
+#a9c439;
+#cafc03;
+#fcb414;
+#61479e;
+#6a24bb;
+#1f1f1f;
+#2a1855;
+*/
 body{
-    background-color:#e7eaec;
+    background-color: #1f1f1f;;
 }
-
 .container{
-    width: 1366px;
-    margin: 0 auto;
-}
-
-body > header{
-    background-color: #27282c;
-    color: #e7eaec;
-    padding: 16px 0;
-}
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header li{
-    display: inline;
-}
-header li a{
-    text-decoration: none;
-    color: #e7eaec;
-    font-weight: bold;
-    font-size: 1em;
-    margin-left: 2em;
-    text-transform: uppercase;
-}
-
-h2{
-    color: #27282c;
-}
-
-section{
-    padding: 16px 0;
-    color: #27282c;
-}
-section h2, .articles article{
-    margin-bottom: 8px;
-}
-
-.articles{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.articles article img{
-    max-height: 200px;
+    max-width: 1280px;
     width: 100%;
-    border-radius: 5px;
-    object-fit: cover;
-}
-.articles article{
-    max-width: 30%;
-    background-color: rgba(39, 40, 44, 0.055);
-}
-.card{
-    padding: 0 1em 1em 1em;
-    align-items: center;
-}
-.articles article h3{
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-.articles article p{
-    margin-bottom: 0.7em;
-}
-.articles article a{
-    padding: 0.5em;
-    display: inline-block;
-    border-radius: 3px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1em;
-}
-/*tarefa*/
-#cie .articles article a{
-    background-color: #2e8ffd;
-    color: #e7eaec;
-}
-#cie h2{
-    color: #2e8ffd;
-}
-#cie .separador{
-    background-color: #2e8ffd;
-}
-
-#cult .articles article a{
-    background-color: #d66a2c;
-    color: #e7eaec;
-}
-#cult h2{
-    color: #d66a2c;
-}
-#cult .separador{
-    background-color: #d66a2c;
-}
-
-#economy .articles article a{
-    background-color: #0e5c35;
-    color: #e7eaec;
-}
-#economy h2{
-    color: #0e5c35;
-}
-#economy .separador{
-    background-color: #0e5c35;
-}
-
-#sports .articles article a{
-    background-color: rgb(196, 39, 39);
-    color: #e7eaec;
-}
-#sports h2{
-    color:  rgb(196, 39, 39);
-}
-#sports .separador{
-    background-color:  rgb(196, 39, 39);
-}
-
-
-.creation-date{
-    color: #27282c5e;
-    font-size: 0.8em;
+    margin: auto;
 }
 .separador{
     padding: 0.1em;
-    background-color: #27282c;
+    background-color:  #a9c439;
+    margin-bottom: 0.8em;
+}
+
+header .container, section .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header{
+    padding: 1em;
+    background-color:#6a24bb;
+    color:rgba(255, 255, 255, 0.87);
+    font-weight: 900;
+}
+header h1{
+    font-weight: 900;
+}
+header a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.897);
+}
+header nav li{
+    display: inline;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-left: 1em;
+    font-weight: 700;
+}
+
+section h2, section h3{
+    color: rgba(255, 255, 255, 0.774);
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+}
+section .container{
+    align-items: flex-start;
+    margin-top: 2em;
+    color: #cafc03;
+}
+section p{
     margin-bottom: 1em;
+    color: rgba(255, 255, 255, 0.774);
+}
+section img{
+    margin-right: 2em;
+    max-width: 100%;
+    height: 400px;
+    border-radius: 0.5em;
+}
+.brands img, .xoxolink img{
+    height: 1.5em;
+    margin-right: 0;
+}
+
+.brands li, .xoxolink li{
+    text-decoration: none;
+    display: inline;
+    margin-right: 1em;
+}
+#contato .container{
+    display: block;
+}
+.contato-meto{
+    display: flex;
+    justify-content: space-between;
+}
+form input,
+form button,
+form textarea{
+    display: block;
+    width: 25em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+form textarea{
+    resize: none;
+    width: 20.8em;
+    height: 10em;
+}
+button{
+    padding: 1em;
+    background-color: #a9c439;
+    border: none;
+    cursor: pointer;
+    color:rgba(255, 255, 255, 0.774);
+    font-weight: 900;
+}
+button:hover{
+    background-color: #6a24bb;
 }
 
 footer{
-    padding: 2em;
-    text-align: end;
-    background-color: #27282c;
-    color: #e7eaec;
+    display: flex;
+    background-color: #6a24bb;
+    padding: 1.7em;
+    margin-top: 3em;
+    justify-content: flex-end;
+    color: rgba(255, 255, 255, 0.774);
+    width: ;
 }
