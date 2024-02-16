@@ -1,34 +1,8 @@
-header{
-    border-bottom: 1px solid #ccc;
-    padding: 0.5em 1.5em;
+.container{
+    max-width: 20em;
+    margin-top: 5em;
+    margin: 5em auto;
 }
-
-.aviso{
+button{
     margin-top: 1em;
-}
-
-time{
-    display: block;
-}
-.post{
-    margin-bottom: 2em;
-}
-.post img{
-    width: 100%;
-    border-radius: 0.2em;
-}
-
-.patrocinador img{
-    width: 100%;
-    margin-bottom: 1em;
-    border-radius: 0.2em;
-}
-
-textarea{
-    height: 10em;
-    resize: none
-}
-
-footer{
-    padding: 2em 2em 1em 0 ;
 }
