@@ -1,68 +1,46 @@
-const form = document.getElementById('form-atividade');
-const imgAprovado = '<img src="./images/aprovado.png" alt="emoji festejando"/>';
-const imgReprovado = '<img src="./images/reprovado.png" alt="Emoji triste"/>';
-const atividades = [];
-const notas = [];
-const spanAprovado = '<span class="resultado aprovado">Aprovado</span>' /*Resgata a classe aprovado e resultado no span que criamos*/
-const spanReprovado = '<span class="resultado reprovado">Reprovado</span>' /*Resgata a classe reprovado e resultado no span que criamos*/
-const notaMinina = parseFloat(prompt("Digite a nota minima:"));
+const form = document.getElementById('form-contatos'); /*Resgata formulário*/
+const contato=[]; /*Array*/
+const numero=[]; /*Array*/
 
-let linhas=''; /*String vazia, deve ser colocada num escopo global para que o seu conteudo seja preservado*/
+let linhas ='';
 
-
-form.addEventListener('submit', function(e) {
-    e.preventDefault();  /*impede o comportamento padrão do botão submit*/
-    adicionaLinha(); /*chama função*/
+form.addEventListener('submit', function(e){
+    e.preventDefault(); /*Previne o comportamento padrão do botão*/
+    adicionaLinha(); /*Chama função*/
     atualizaTabela(); /*chama função*/
-    atualizaMediaFinal(); /*chama função*/
-});
+})
 
+/*Função para criar linhas e inserir os dados do formulário.*/
 function adicionaLinha(){
-    const inputNomeAtividade = document.getElementById('nome-atividade');
-    const inputNotaAtividade =  document.getElementById('nota-atividade');
+    const inputnomeContato = document.getElementById('nome-contato'); /*Variavel(constante) que recebe o valor do nome do contato*/
+    const inputnumeroContato = document.getElementById('numero-contato'); /* variavel (constante) que recebe o valor do número do contato*/
 
-    if (atividades.includes(inputNomeAtividade.value)) /*notifica o usuário que a atividade ja foi inserida anteiriormente e nao permite adiciionar uma linha*/ {
-        alert(` A atividade: ${inputNomeAtividade.value} já foi adicionada a lista anteriormente.`);
-    } else /*Adiciona linha com as informações inseridas*/ { 
-    
-    atividades.push(inputNomeAtividade.value);           /*adiciona o nome da atividade ao array "atividades" */
-    notas.push(parseFloat(inputNotaAtividade.value));    /*adiciona a nota da atividade ao array "notas" */
+    /* Condição "IF" para validar se o número ou nome já foram adicionados anteriormente.*/
+    /* || = "ou" */
 
-    /*Preenchendo linhas com os inputs*/
-    let linha = '<tr>'; /*inicia linha*/
-    linha += `<td>${inputNomeAtividade.value}</td>`; /*Coluna 01*/
-    linha += `<td>${inputNotaAtividade.value}</td>`; /*Coluna 02*/
-    linha += `<td>${inputNotaAtividade.value >= notaMinina ? imgAprovado : imgReprovado} </td>`; /*Coluna 03. ? seria o if e os : são o else.*/
-    linha += `</tr>`; /*finaliza linha*/
+    if (contato[inputnomeContato.value] || numero.includes(parseFloat(inputnumeroContato.value))) {
+        alert(`Este contato ou número já foi salvo anteriormente.`);
+        /*O parse float converte o número de string para número de ponto flutuante, sei que não é o ideal, mas foi a única maneira, com o que
+        aprendemos até o momento, em que pude fazer a comparação tanto do campo contato quanto do campo número com uma condição simples.*/
 
-    linhas += linha; /*recebe linha*/
-} 
+    } else{
 
-    inputNomeAtividade.value='';    /*limpa formulário*/
-    inputNotaAtividade.value='';    /*limpa formulário*/
-}
+        contato[inputnomeContato.value]=(inputnumeroContato.value); 
+        numero.push(parseFloat(inputnumeroContato.value));
 
-/*Colocando o conteudo dentro do corpo da tabela atualizando seu conteudo*/
-function atualizaTabela(){ 
-        const corpoTabela= document.querySelector('tbody');
-        corpoTabela.innerHTML = linhas;
-}
+        let linha ='<tr>';
+        linha += `<td>${inputnomeContato.value}</td>`
+        linha += `<td>${inputnumeroContato.value}</td>`
+        linha += '</tr>';
 
-
-function atualizaMediaFinal() {
-
-    const mediaFinal = calculaMediaFinal(); /* recebe o calcula media final */
-    document.getElementById('media-final-valor').innerHTML=mediaFinal; /* resgata o id media final valor e atualiza modificando o seu valor com o inner html*/
-    document.getElementById('media-final-resultado').innerHTML = mediaFinal >=notaMinina ? spanAprovado : spanReprovado; /*Resgata o resultado da media final e altera o valor com o inner html baseado na condição X >= y ? 1 : 2)*/
-
-}
-
-function calculaMediaFinal(){
-
-    let somaDasNotas =0; /*Soma as notas com for*/ 
-    for (let i=0; i < notas.length; i++){
-        somaDasNotas += notas[i]; /*Encurtada*/
+        linhas += linha;
     }
 
-    return somaDasNotas/notas.length /* Retorna para o calculaMediaFinal as notas somadas e divididades pela quantidade (lenght) de notas*/
+    inputnomeContato.value='';
+    inputnumeroContato.value='';
+}
+
+function atualizaTabela(){ 
+    const corpoTabela=document.querySelector('tbody');
+    corpoTabela.innerHTML=linhas;
 }
