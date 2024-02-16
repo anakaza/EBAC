@@ -1,28 +1,74 @@
-$(document).ready(function() {                                                 /*Está função aguarda que o DOM esteja completamente coarregado antes de executar,  garantindo que o js só seja executado após o html ter carregado corretamente.*/
-    $('form').on('submit', function(e){
-        e.preventDefault();
+$(document).ready(function(){
 
-        const novaTarefa = $('#nova-tarefa').val();                            /*Obtem o valor do #ID e armazena na variável.*/
-        $('#nova-tarefa').val('');                                             /*limpa o campo do input após a função*/
-
-        const novoItem = $('<li></li>').text(novaTarefa);                      /*Cria um novo elemento <li> e adiciona o texto armazenaod na variável 'novaTarefa'*/
-        novoItem.addClass('fazer');                                            /*Adiciona a classe 'fazer' ao 'novoItem' por padrão. A classe 'fazer' é uma adição visual ao elemento.*/
-
-        novoItem.on('click', function(){                                       /*Função que aplica a classe 'Concluido' ao 'novoItem'.*/
-            $(this).toggleClass('concluido');
-        });
-
-        novoItem.on('click', function(){                                       /*Função que aplica a classe 'fazer' ao 'novoItem'.*/
-            $(this).toggleClass('fazer');
-        });
-
-        $(novoItem).appendTo('ul');                                            /*Função que anexa esse novo <li> na <ul>.*/
-
+    /*função carrossel slick*/
+    $('#carrossel-imagens').slick({
+        autoplay: true,
+        arrows: false
     });
 
-    $('form').on('reset', function(e){                                        
-        e.preventDefault();
+    /*Função exibir ou esconder o menu (nav) do menu hamburguer(spans) */
+    $('.menu-hamburguer').click(function(){
+        $('nav').slideToggle();
+    })
 
-        $('#lista-tarefa li:last-child').remove();                            /*Função que remova o ultímo filho (ultimo <li>) adicionado ao <ul> (#lista-tarefa)*/
-    });                                                                       /*#lista-tarefa (UL chamada por #ID) li:last-child (elemento li e indicativo do ultimo filho.*/
-});
+    /*Máscaras para o formulário. S = letras 0 = números*/
+    $('#telefone').mask('(00) 0 0000-0000')
+
+    /*Validação com jquery. Lembre-se que o Plugin utiliza a propriedade name="nome do input" */
+    $('form').validate({
+        rules: {
+            nome: {
+                required: true
+            },
+            email: {
+                required: true
+            },
+            telefone: {
+                required: true
+            },
+            mensagem: {
+                required: true
+            },
+            veiculoDeInteresse: {
+                required: false
+            }
+        },
+        messages: { /*Mensagens de erro para o usuário.*/
+            nome: 'Por favor, insira seu nome.',
+            telefone: 'Por favor, insira seu telefone celular.',
+            email: 'Por favor, insira o seu e-mail para contato.',
+            mensagem: 'Por favor, insira a sua mensagem.'
+        }
+
+        /*Disparar alerta - Interceptar o envio e do formulário invalido 
+
+        submitHandler: function(form){
+            console.log(form)
+        },
+        
+
+        invalidHandler: function(evento, validador){                            
+            let camposIncorretos = validador.numberOfInvalids();
+            if (camposIncorretos){
+                alert(`Existem ${camposIncorretos} campos incorretos.`)
+            }
+        } */
+        
+    }) /*Fim do $('form').validate({}) */
+
+    $('.lista-veiculos button').click(function(){
+        const destino = $('#contato');
+
+        /*Pega o elemento pai (parent) dentro deste elemento (lista veiculos) procura o texto dentro do elemento h3*/
+        const nomeVeiculo = $(this).parent().find('h3').text();
+
+        $('#veiculo-interesse').val(nomeVeiculo);   /*o 'Val' serve para recuperar ou definir 'setar' o valor*/
+
+        /*Animação e efeito de rolar a página na tag html*/
+        $('html').animate({
+            scrollTop: destino.offset().top  /*offset retorna a posição do elemento para sabermos o quão distante ela está do 'topo'.*/
+        }, 1000) /*Duração do efeito em ms*/
+    })
+
+
+})
