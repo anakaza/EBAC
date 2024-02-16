@@ -1,62 +1,652 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap</title>
-    <link rel="stylesheet" href="/lib/bootstrap.min.css">
-    <style>
-        body{
-            background-color: #f8f9fa;
-        }
-        .dst-alt {
-            height: 90vh;
-            max-width: 1200px;
-        }
-        footer{
-            padding: 1em 0;
-        }
-        .dropdown button,
-        .dropdown-menu{
-            padding: 0 1em;
-            width: 100%;
-        }
-    </style>
+    <title>Modulo 14 - Aula</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="main.css">
+    
 </head>
 <body>
+<!--Header-->
+<header class="navbar navbar-expand-lg sticky-top p-2" id="cabecalho">
+    <div class="container">
 
-<div class="container-fluid dst-alt d-flex justify-content-center align-items-center item">
-        <div class="nav-item">
-            <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle fs-1 " data-bs-toggle="dropdown">
-                Bootsrap
+        <h1 class="navbar-brand section-title m-0">Leaf Green</h1>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+            <ul class="nav nav-pills d-block d-md-flex">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre-restaurante">
+                    <i class="bi bi-flower2 me-1"></i>
+                    Quem somos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#events">
+                        <i class="bi bi-calendar2-check-fill me-1"></i>
+                    Eventos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#cardapio">
+                    <i class="bi bi-file-text-fill me-1"></i>
+                    Cardápio
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">
+                    <i class="bi bi-chat-dots-fill me-1"></i>
+                    Contato
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<!--Carousel-->
+<section class="c-container">
+    <div class="row">
+        <div class="col">
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+                <div class="carousel-inner">
+        
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="/image/CV-00.jpg" alt="slide-1">
+                    </div>
+        
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/image/CV-01.jpg" alt="slide-2">
+                    </div>
+        
+                    <div class="carousel-item"data-bs-interval="3000">
+                        <img src="/image/CV-02.jpg" alt="slide-3">
+                    </div>
+        
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="carousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="carousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="carousel" data-bs-slide-to="2"></button>
+                    </div>
+        
+                </div>
+                <button data-bs-target="#carousel" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
-                <ul class="dropdown-menu text-center">
-                    <li class="dropdown-item">
-                        <a class="nav-link" href="./index1.html">Módulo 13 - Aula</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a class="nav-link" href="/index2.html">Módulo 13 - Tarefa</a>
-                    </li>
-                </ul>
+                <button data-bs-target="#carousel" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
-</div>
+    </div>
+</section>
 
-    <!--footer-->
-<div class="container">
+<div data-bs-spy="scroll" data-bs-target="cabecalho">
+
+<!--Sobre-->
+    <section id="sobre-restaurante">
+        <div class=" container pt-4 pb-4">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="image/AV-00.jpg" class="d-block w-100 rounded" alt="">
+                </div>
+                <div class="col-md-7">
+                    <h3 class="section-title">A <span class="text-colored">Leaf Green</span></h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A optio animi accusamus, harum, tenetur voluptates, consequuntur illum reprehenderit repellat tempora earum ipsa voluptatum. Laboriosam quae vitae, nobis ratione accusantium inventore.</p>
+                    <h5 class="section-title">Espaço <span class="text-colored">Leaf Green</span></h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, obcaecati laudantium. Aspernatur non excepturi sequi quis quod, mollitia aperiam quae minima? Exercitationem quaerat rem, voluptas magni nulla labore aspernatur iste!</p>
+                    <ul>
+                        <li>#1</li>
+                        <li>#2</li>
+                        <li>#3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+<!--Eventos-->
+<section id="events">
+    <div class=" container pt-4 pb-4">
+        <div class="row">
+            <h3 class="section-title text-center pb-4">Party <span class="text-colored">Picks</span></h3>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="./image/PP-01.jpg" alt="Bolo de aniversário" class="d-block w-100 rounded">
+                <h5 class="section-title text-colored pt-3 fs-5">
+                    <i class="bi bi-cake2-fill pe-2 fs-5"></i>
+                    Aniversários
+                </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ea perspiciatis dolor illum molestias, officiis possimus esse quasi ipsam.</p>
+            </div>
+
+            <div class="col-md-4">
+                <img src="./image/PP-02.jpg" alt="casamento" class="d-block w-100 rounded">
+                <h5 class="section-title text-colored pt-3 fs-5">
+                    <i class="bi bi-arrow-through-heart-fill pe-2 fs-5"></i>
+                    Recepção de casamentos
+                </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ea perspiciatis dolor illum molestias, officiis possimus esse quasi ipsam.</p>
+            </div>
+
+            <div class="col-md-4">
+                <img src="./image/PP-03.jpg" alt="confraternização" class="d-block w-100 rounded">
+                <h5 class="section-title text-colored pt-3 fs-5">
+                    <i class="bi bi-people-fill pe-2 fs-5"></i>
+                    Confraternizações
+                </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ea perspiciatis dolor illum molestias, officiis possimus esse quasi ipsam.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Cardápio-->
+<section id="cardapio">
+    <div class="container pt-4 pb-4">
+
+        <div class="row">
+            <h3 class="section-title text-center"> <span class="text-colored">Cardápio</span></h3>
+        </div>
+
+        <div class="row">
+            <aside class="col-md-2">
+                <nav class="nav nav-pills flex-column">
+                    <button data-bs-toggle="tab" data-bs-target="#aptv" type="button" class="nav-link active">Bites</button>
+                    <button data-bs-toggle="tab" data-bs-target="#pp" type="button" class="nav-link">Prato Raiz</button>
+                    <button data-bs-toggle="tab" data-bs-target="#goles" type="button" class="nav-link">Goles</button>
+                    <button data-bs-toggle="tab" data-bs-target="#tntc" type="button" class="nav-link">Tentações</button>
+                    <button data-bs-toggle="tab" data-bs-target="#prt" type="button" class="nav-link">Party picks</button>
+                </nav>
+            </aside>
+            <div class="col-md-10">
+                <div class="tab-content">
+
+                    <!--Aperitivos e entradas-->
+                    <div class="tab-pane active" id="aptv">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/APT-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/APT-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/APT-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/APT-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/APT-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/APT-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/APT-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/APT-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pratos principais-->
+                    <div class="tab-pane" id="pp">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Bebidas-->
+                    <div class="tab-pane" id="goles">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/BV-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/BV-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/BV-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/BV-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/BV-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/BV-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/BV-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/BV-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Sobremesas-->
+                    <div class="tab-pane" id="tntc">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/TNTC-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/TNTC-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/TNTC-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/TNTC-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/TNTC-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/TNTC-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/TNTC-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/TNTC-00.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Sobremesas-->
+                    <div class="tab-pane" id="prt">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-04.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-04.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-04.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-04.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-04.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-04.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-04.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <img class="d-block w-100 rounded mt-2" src="./image/PP-04.jpg" alt="">
+                                <h5 class="text-colored text-center pt-1">XXX-XXX</h5>
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Contato-->
+<section id="contato">
+    <div class="container pt-4 pb-4">
+
+        <div class="row">
+            <h2 class="sewction-ttile">Fale <span class="text-colored">conosco</span></h2>
+        </div>
+        <div class="row">
+
+            <div class="col-md-7">
+                <form id="form-contato">
+                    <div>
+                        <label class="pb-2 pt-2 text-colored2" for="nome">Seu nome</label>
+                        <input type="text" id="nome" name="nome" class="form-control" required>
+                    </div>
+            
+                    <div>
+                        <label class="pb-2 pt-2 text-colored2" for="email">Seu e-mail</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+            
+                    <div>
+                        <label class="pb-2 pt-2 text-colored2" for="tel">Seu telefone</label>
+                        <input type="text" id="tel" name="telefone" class="form-control tel">
+                    </div>
+            
+                    <div>
+                        <label class="pb-2 pt-2 text-colored2" for="mensagem">Sua mensagem</label>
+                        <textarea class="form-control" id="mensagem" name="mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn mt-2 btn-fc mx-auto">Enviar</button>
+                </form>
+            </div>
+
+            <div class="col-md-5">
+                <div class="row">
+                    <h3 class="section-title fs-4 text-colored">Redes Sociais</h3>
+                    <ul class="social-links">
+                        <li class="fs-4 me-2">
+                            <a href="#">
+                                <i class="bi bi-facebook text-colored"></i>
+                            </a>
+                        </li>
+                        <li class="fs-4 me-2">
+                            <a href="#">
+                                <i class="bi bi-instagram text-colored"></i>
+                            </a>
+                        </li>
+                        <li class="fs-4 me-2">
+                            <a href="#">
+                                <i class="bi bi-whatsapp text-colored"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row mt-4">
+                    <p class="text-colored2">
+                        <i class="bi bi-geo-alt-fill text-colored me-2 fs-4"></i>
+                        Rua Test Exemplo nº 123, Bairro BS - São Paulo - SP
+                    </p>
+                </div>
+            </div>
+
+        </div>        
+    </div>
+</section>
+
+
+
     <footer>
-        <div class="row align-items-center">
-            <div class="col d-flex justify-content-center">
-                <p>&copy; 2023 lOl - Todos os direitos reservados.</p>
+        <div class="row">
+            <div class="d-flex justify-content-end">
+                <p>&copy; 2023 Leaf Green - Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
+
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 
+<!--Correção scroll com o header-->
+<script>
+    $(document).ready(function(){
+    
+        //capturar o evento de clique em um link do menu, altura o header e definindo offset para section
+        $('.nav-link').click(function(){
+            var irSection = $(this).attr('href'); //obter o href do link clicado o #
+            var sectionOS = $(irSection).offset().top; // Obtém o offset da seção
+            var altHeader = $('header').outerHeight(); // Obtém a altura do header
+    
+                    /*
+                    Attr: É uma função que retorna o valor de um atributo
+                    do elemento HTML ao qual a regra CSS está sendo aplicada.
+                    Esta função é frequentemente utilizada para controlar dinamicamente
+                    o conteúdo estilizado com base nos atributos dos elementos HTML.
+    
+                    Offset:
+                    Posição diferente da posição original.
+    
+                    Outerheight:
+                    Ela é utilizada para obter a altura de um elemento HTML,
+                    incluindo o preenchimento padding e a border. 
+                    */
+    
+        // Movendo a página para a section respeitando a altura de sobreposição do header
+        $('html, body').animate({
+            scrollTop: sectionOS - altHeader
+        }, 500);
+    
+        return false; //Impede a navegação padrão, similar ao prevent default
+    
+        }); //fecha captura
+        
+    
+    }); //fecha function
+</script>
+    
+<!--mascara e validate-->
+<script>
+    $(document).ready(function (){
+        
+        //validação
+        $('#form-contato').validate({
+            rules:{
+                telefone:{
+                    required: true,
+                    minlength: 14,
+                }
+            },
+            //validação mensagem
+            messages:{
+                telefone:{
+                    required: 'Campo obrigatório',
+                    minlength: 'Informe um número de telefone válido'
+                }
+            },
+            //validação confirma
+            submitHandler: function(form){
+                alert('Formulário enviado com sucesso!');
+            }
+        });
+        //Máscara
+        $('.tel').mask('(00) 00000-0000');
+    });
+</script>
 
-    <script src="/lib/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
 </html>
