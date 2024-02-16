@@ -2,72 +2,109 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Familjen Grotesk', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
-.box{
+body{ 
+    padding-top: 2em;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    margin: 0 auto 1em auto;
+}
+header img{
+    display: none;
+    height: 3em;
+    margin: 1em;
+    opacity: 0.9;
+}
+header h1{
+    font-size: 2em;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.151);
+    max-width: 45em;
+    width: 100%;
+    margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.082);
     padding: 2em;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 1em;
-    width: 100%;
-    margin-bottom: 2em;
-    width: 20em;
-    margin: 2em auto 0 auto;
-    border-radius: 1em;
-}
-.box h1{
-    font-weight: 600;
-    margin-bottom: 0.5em;
+    border-radius: 2em;
 }
 
-input, button, span{
-    display: block;
+form{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+form input{
+    max-width: 15em;
+    font-size: 1em;
+    background-color: #fff;
     border: none;
     padding: 0.5em;
-    border-radius: 0.2em;
+    border-radius: 0.3em;
+    margin-left: 2em;
 }
-input{
-    max-width: 100%;
-    width: 20em;
-    margin: 0 auto 1.5em auto;
-}
-
-/*Remover setas numéricas*/
 form input[type="number"]::-webkit-inner-spin-button,
 form input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0; 
 }
-/*Remover setas numéricas mozila*/
 input[type=number] {
     -moz-appearance: textfield;
 }
-
-button{
-    background-color: black;
+form button{
+    background-color: #000000;
     color: #fff;
-    margin: 1.5em auto 0 auto;
-    border: none;
-    padding: 0.5em 0.5em 0.6em 0.5em;
     font-size: 1em;
-    font-weight: 700;
-    border-radius: 0.5em;
-}
-span{
-    display: none;
-    margin: 1.5em auto 0 auto;
-    padding: 1em;
-    max-width: 20em;
+    padding: 0.3em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
     border-radius: 0.2em;
+    width: 2em;
+    margin: 0 2.5em;
+}
+
+
+table{
+    width: 100%;
+    text-align: center;
+}
+table th{
+    border-bottom: 0.15em solid rgba(0, 0, 0, 0.123);
     font-weight: 600;
 }
-#erro{
-    background-color: red;
-    color: #fff;
+table td{
+    padding:  0.5em 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.123);
 }
-#sucesso{
-    background-color: rgb(153, 255, 0);
-    color: black;
+table td img{
+    height: 1.5em;
+}
+
+.resultado{
+    padding: 0.2em 0.3em;
+    font-weight: 600;
+    color: #fff;
+    background-color: black;
+    border-radius: 0.2em;
+    font-size: 16px;
+}
+.aprovado{
+    background-color: #3c0bff;
+    color: white;
+}
+.reprovado{
+    background-color:  #000000;
+    color: white;
+}
+
+tfoot{
+    font-weight: 600;
 }
