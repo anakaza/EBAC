@@ -1,71 +1,28 @@
-/* Antes de qualquer coisa, sigo com tudo que já nos foi ensinado até o momento, com outra lógica.*/
-
-$(document).ready(function(){
-        var formVisivel = false;
-
-    $('#btn-fixo').click(function() {
-        if(!formVisivel){
-            $('form').slideDown(); 
-            formVisivel = true;
-            $(this).addClass('active');         /* Troquei o  "$('button header').add..." por this facilitando a aplicação o código.*/
-            $('#add-img').hide();
-            $('#rmv-img').show();
-
-            /*Ao ativar o botão "+" traz a página para o topo do formulário melhorando a interação do usuário*/
-            /*Código de pesquisa. Serve para rolar a página para acompanhar as ações do botão */
-            $('html, body').animate({ 
-                scrollTop: $('form').offset().top
-            }, 'slow');
-
-        } else{
-            $('form').slideUp();
-            formVisivel = false;
-            $(this).removeClass('active');       /* Troquei o  "$('button header').add..." por this facilitando a aplicação do código.*/
-            $('#add-img').show();
-            $('#rmv-img').hide(); 
-
-            //fica a seus critério permitir arrastar a página após fechar o formulário
-
-            /* 
-            $('html, body').animate({ 
-                scrollTop: $('form').offset().top
-            }, 'slow');
-            */
-
-        }
-});
-
-    
+$(document).ready(function() {                                                 /*Está função aguarda que o DOM esteja completamente coarregado antes de executar,  garantindo que o js só seja executado após o html ter carregado corretamente.*/
     $('form').on('submit', function(e){
         e.preventDefault();
 
-        const enderecoDaNovaImagem = $('#endereco-image-nova').val(); //Add url elemento dinamico
-        
-        /*Criação de um novo item para a lista*/
-        const novoItem =$('<li></li>');
+        const novaTarefa = $('#nova-tarefa').val();                            /*Obtem o valor do #ID e armazena na variável.*/
+        $('#nova-tarefa').val('');                                             /*limpa o campo do input após a função*/
 
-        /*Adiciona a imagem resgatada (const enderecoDaNovaImagem) e define o elemento de destino (const novoItem)*/
-        $(`<img src="${enderecoDaNovaImagem}"/>`).appendTo(novoItem); 
-        
-        /*Adiciona o overlay com o link para a imagem adicionada*/
-        $(`
-            <div class="overlay-image-link">
-                <a href = "${enderecoDaNovaImagem}" target="_blank" title="Abrir">
-                    Abrir
-                </a>
-            </div>
-        `).appendTo(novoItem);
+        const novoItem = $('<li></li>').text(novaTarefa);                      /*Cria um novo elemento <li> e adiciona o texto armazenaod na variável 'novaTarefa'*/
+        novoItem.addClass('fazer');                                            /*Adiciona a classe 'fazer' ao 'novoItem' por padrão. A classe 'fazer' é uma adição visual ao elemento.*/
 
-        
-        $(novoItem).appendTo('ul'); /*Adicionando o novo item na ul do html*/
-        $('#endereco-image-nova').val(""); /*limpa o campo da url*/
+        novoItem.on('click', function(){                                       /*Função que aplica a classe 'Concluido' ao 'novoItem'.*/
+            $(this).toggleClass('concluido');
+        });
 
-        /*rola para baixo, após a adição, para que o usuário acompanhe a adição de imagens*/
-        $('html, body').animate({ 
-            scrollTop: $('form').offset().top
-        }, 'slow');
+        novoItem.on('click', function(){                                       /*Função que aplica a classe 'fazer' ao 'novoItem'.*/
+            $(this).toggleClass('fazer');
+        });
 
-    })
+        $(novoItem).appendTo('ul');                                            /*Função que anexa esse novo <li> na <ul>.*/
 
+    });
 
-})
+    $('form').on('reset', function(e){                                        
+        e.preventDefault();
+
+        $('#lista-tarefa li:last-child').remove();                            /*Função que remova o ultímo filho (ultimo <li>) adicionado ao <ul> (#lista-tarefa)*/
+    });                                                                       /*#lista-tarefa (UL chamada por #ID) li:last-child (elemento li e indicativo do ultimo filho.*/
+});
