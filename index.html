@@ -1,34 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML com JS</title>
-    <link rel="stylesheet" href="./main.css" />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Compara A e B</title>
 </head>
 <body>
-    <div class="container">
-        <h1>EBAC Banking</h1>
-        <h2>Depósitos</h2>
-        <form id="form-deposito">
-            <input type="text"  id="nome-beneficiario" required placeholder="Nome completo do beneficiário" />
-            <p class="error-message">Digite o nome completo.</p>
-            <input type="number" id="numero-conta" required placeholder="Número da conta" />
-            <input type="number" id="valor-deposito" required placeholder="Valor" />
-            <textarea id="descricao" placeholder="Descrição (opcional)"></textarea>
-            <button type="submit" id="btn-depositar">Depositar</button>
-        </form>
 
-        <p class="success-message"></p>
+        <div class="box">
+            <h1>Compare 'A' e 'B'</h1>
+            <form id="form">
+                <input type="number" id="campo-A" placeholder="Campo A (saque).">
+                <input type="number" id="campo-B" placeholder="Campo B (saldo).">
+                <button type="submit">Comparar</button>
+            </form>
+            <span id="sucesso">Comparação realizada com sucesso.<br/><br/>O  valor do <b>'campo A'</b> é <b>menor</b> ou <b>igual</b> o valor do que o valor do <b>'campo B'</b>.</span>
+            <span id="erro">Não é possivel comparar os números.<br/><br/> Lembre-se que o valor no 'campo A' deve ser menor ou igual ao valor no 'campo B'.</span>
 
+            </div>
 
-    </div>
-
-
-
-
-    <script src="./main.js"></script>
 </body>
+
+<script src="./main.js"></script>
 </html>

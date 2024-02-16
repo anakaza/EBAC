@@ -1,53 +1,33 @@
-const form = document.getElementById('form-deposito');
-const nomeBeneficiario = document.getElementById('nome-beneficiario');
-let formEValido=false;
+const form = document.getElementById('form');
+const campoB = document.getElementById('campo-B');
+const campoA = document.getElementById('campo-A');
+const acerto = document.getElementById('sucesso');
+const error = document.getElementById('erro');
 
-function validaNome(nomeCompleto){
-    const nomeComoArray = nomeCompleto.split(' ');
-    return nomeComoArray.length>=2;
+function comparaAeB(campoB, campoA){
+    return campoB >= campoA;
 }
 
-form.addEventListener('submit',function(e){
 
+form.addEventListener('submit', function(e){
     e.preventDefault();
 
-    const numeroContaBeneficiaior = document.getElementById('numero-conta');
-    const valorDeposito = document.getElementById('valor-deposito');
-    const mensagemDescricao = document.getElementById('descricao');
-    const mensagemSucesso = `Montante de: <b>${valorDeposito.value}</b> depositado para o cliente: <b>${nomeBeneficiario.value}</b> - conta de número: <b>${numeroContaBeneficiaior.value}</b>`;
-    
+    let validForm = comparaAeB (campoB.valueAsNumber, campoA.valueAsNumber)
 
-    formEValido = validaNome(nomeBeneficiario.value)
-    if (formEValido){
-
-        const containerMensagemSucesso= document.querySelector('.success-message');
-
-        containerMensagemSucesso.innerHTML=mensagemSucesso;
-        containerMensagemSucesso.style.display = 'block';
-
-        nomeBeneficiario.value='';
-        numeroContaBeneficiaior.value='';
-        valorDeposito.value='';
-        mensagemDescricao.value='';
-
-
-    } else {
-        nomeBeneficiario.style.border = '0.1em solid red'
-        document.querySelector('.error-message').style.display="block"
+    if(validForm){
+        acerto.style.display = 'block';
+        campoA.value='';
+        campoB.value='';
     }
-    
 })
 
-nomeBeneficiario.addEventListener('keyup', function(e){
-    console.log(e.target.value);
-    formEValido = validaNome(e.target.value);
+campoA.addEventListener('keyup', function(e){
+    let validForm = comparaAeB (campoB.valueAsNumber, campoA.valueAsNumber)
 
-    if(!formEValido) {
-        nomeBeneficiario.classList.add('input-error')
-        document.querySelector('.error-message').style.display="block"
+    if(!validForm){
+        error.style.display ='block';
     } else{
-        nomeBeneficiario.classList.remove('input-error')
-        document.querySelector('.error-message').style.display="none"
+        error.style.display ='none'
     }
-    
+
 })
