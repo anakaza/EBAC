@@ -1,82 +1,159 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Familjen Grotesk', sans-serif;
+    font-family: 'Poppins', sans-serif; /*Fonte questionável mas se adequa a proposta*/
+}
+body{
+    background-color: #ebebeb;
+}
+header{
+    background-color: rgb(0, 0, 0);
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 3em;
+    color:#fff;
 }
 
-header{
+main{
     display: flex;
+    flex-direction: column;
     align-items: center;
+    margin-bottom: 10em;
+    margin: auto;
+    max-width: 1360px;
 }
-header img{
-    height: 2em;
-    margin: 1em;
-    opacity: 0.9;
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  center;
+    max-width: 1360px;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 7em;
 }
-header h1{
-    font-size: 2em;
+ul li{
+    flex: 0 0 13%;
+    list-style: none;
+    position: relative;
+    height: 20em;
+    margin: 1%;
+    overflow: hidden;
+    display: flex; /*para centralizar as imagem no espaço definido*/
+    align-items: center; /* Centralizar a imagem dentro do espaço definido mantendo as proporções evitando distorções*/
+    justify-content: center;
+}
+ul li img{
+    width: 100%; /*Distribui a imagens em 100% do seu tamanho de largura no espaço com espaços*/
+    height: 100%; /*Distribui a imagens em 100% do seu tamanho de altura no espaço com distorção*/
+    border-radius: 0.2em; /* arestas menos afiadas*/
+    object-fit: cover; /* garante que a imagem se ajuste ao espaço, mantendo a sua proporção e cortando qualquer parte que ultrapasse o tamanho determinado*/
+}
+
+/*versão resumida que atinge o mesmo objetivo*/
+ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    font-size: 1.2em;
     text-transform: uppercase;
 }
 
-.container{
-    margin: 2em auto;
-    max-width: 30em;
+/* ul li a{...} ou uma versão mais extensa:
+
+.overlay-image-link a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+ul li:hover .overlay-image-link a {
+    opacity: 1;
+}
+*/
+.overlay-image-link {
+    background-color:  #141414;
+    position: absolute;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.082);
-    padding: 2em;
-    border-radius: 2em;
+    height: 100%;
+    border-radius: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /*pequisando sobre o transition*/
+}
+ul li:hover .overlay-image-link {
+    opacity: 0.8;
 }
 
 form{
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
+    padding: 1em;
+    text-align: center;
+    display: none;
+    margin-bottom: 7em;
 }
-form input{
-    max-width: 10em;
-    font-size: 1em;
-    background-color: aliceblue;
-    border: none;
+input, button{
     padding: 0.5em;
-    border-radius: 0.2em;
-    margin: 0 auto;
 }
-form input[type="number"]::-webkit-inner-spin-button,
-form input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0; 
+input{
+    border-radius: 0.3em;
+    border-style: groove;
+    opacity: 0.5;
 }
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-form button{
-    background-color: rgb(0, 0, 0);
-    font-size: 2em;
-    border: none;
-    cursor: pointer;
-    border-radius: 0.2em;
-    width: 1.2em;
-    margin: 0 auto;
+button{
+    background-color: black;
+    border-radius: 0.3em;
+    font-weight: bold;
+    text-transform: uppercase;
     color: white;
+    cursor: pointer;
+    border: none;
+    margin: 1em;
 }
 
-table{
-    width: 100%;
+#btn-fixo {
+    background-color: rgba(0, 0, 0, 0.425);
+    position: fixed;
+    bottom: 0.5em;
+    border: none;
+    z-index: 999;
+    color: #fff; /* Altere a cor do texto conforme necessário */
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 2em;
 }
-table th{
-    border-bottom: 1px solid white;
-    padding: 0.5em;
-    font-size: 1em;
-    text-align: center;
-    font-weight: 400;
+#btn-fixo:hover{
+    background-color: black;
 }
-table td{
-    border-bottom: 1px solid white;
-    padding: 0.5em;
-    font-size: 1em;
-    text-align: center;
-    font-weight: 400;
+button
+#rmv-img{
+    display: none;
+}
+#btn-fixo.active {
+    background-color: rgb(255, 0, 0);
 }
 
+footer{
+    padding: 1em;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    display: flex;
+    justify-content: end;
+    padding-right: 3em;
+}
