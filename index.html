@@ -3,50 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modulo 12 - Tarefa - Exercicio_bootstrap</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="/lib/bootstrap.min.css">
+    <style>
+        body{
+            background-color: #f8f9fa;
+        }
+        .dst-alt {
+            height: 90vh;
+            max-width: 1200px;
+        }
+        footer{
+            padding: 1em 0;
+        }
+        .dropdown button,
+        .dropdown-menu{
+            padding: 0 1em;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mb-2">
-                <h3>Formulário de Cadastro</h3>
-            </div>
 
-            <div class="col-12">
-                <form>
-                    <div class="mb-2">
-                        <label class="form-label" for="nome">Seu Nome:</label>
-                        <input class="form-control" type="text" id="nome" required>
-                    </div>
-
-                    <div class="mb-2">
-                        <label class="form-label" for="email">Seu e-mail:</label>
-                        <input class="form-control" type="email" id="email" required>
-                    </div>
-
-                    <div class="mb-2">
-                        <label class="form-label" for="tel">Seu telefone:</label>
-                        <input class="form-control" type="tel" id="tel" required>
-                    </div>
-
-                    <div class="text-center">
-                        <button class="btn btn-primary" type="submit">Cadastrar</button>
-                    </div>
-                </form>
+<div class="container-fluid dst-alt d-flex justify-content-center align-items-center item">
+        <div class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle fs-1 " data-bs-toggle="dropdown">
+                Bootsrap
+                </button>
+                <ul class="dropdown-menu text-center">
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./index1.html">Módulo 13 - Aula</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="/index2.html">Módulo 13 - Tarefa</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+</div>
 
-    <script>
-        $(document).ready(function(){
-            $('#tel').mask('+55 (00) 0 0000-0000')
-        });
-    </script>
+    <!--footer-->
+<div class="container">
+    <footer>
+        <div class="row align-items-center">
+            <div class="col d-flex justify-content-center">
+                <p>&copy; 2023 lOl - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+    <script src="/lib/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
 </html>
