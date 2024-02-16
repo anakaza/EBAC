@@ -3,70 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <title>modulo_11_tarefa</title>
-    <link rel="stylesheet" href="main.css">
-    
+    <title>modulo_12_aula - Conheça o BS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        .container{
+        
+        }
+        header{
+            border-bottom: 1px solid #ccc;
+            padding: 0.5em 1.5em;
+        }
+        .accordion img{
+            max-width: 100%;
+        }
+        .accordion{
+            height: 100%;
+        }
+        .table{
+            border: 1px solid #ccc;
+        }
+        footer{
+            padding: 2em 2em 1em 0 ;
+        }
+    </style>
 </head>
+
 <body>
+    <!--Cabeçalho-->
 
+<div class="container">
     <header>
-        <div class="container">
-            <h1>Sotto</h1>
 
+        <div class="row align-items-center">
+            <div class="col d-flex justify-content-start">
+                <h1 class="h4">Módulo 12 - Bootstrap</h1>
+            </div>
+            <div class="col d-flex justify-content-end col-auto">
                 <nav>
-                    <ul>
-
-                        <li>
-                            <a href="./index2.html">store</a>
-                        </li>
-                    </ul>
+                            <a class="text-dark nav-link active fw-semibold" href="./index2.html">Formulários</a>
                 </nav>
-
+            </div>
         </div>
     </header>
+</div>
 
-    <div class="container conteudo">
-        <main>
-            <section id="sobre">
-                <section class="bloco">
-                    <article class="sobre-sobre">
-                        <a>
-                            <img src="./images/00.jpg" alt="">
-    
-                            <div>
-                                <h2>SOTTO</h2>
-                                <P>
-                                    A Sotto é uma loja especializada na venda de pedras, gemas e na arte de esculpir rochas para criar pisos personalizados e únicos. Situada no coração da cidade, a loja oferece uma atmosfera acolhedora, com uma ampla gama de pedras preciosas e um destaque especial para o trabalho artesanal.
-                                </P>
-                                <p>
-                                    Assim que se entra em Sotto, é imediatamente envolvido pela atmosfera acolhedora, onde as paredes são adornadas com uma variedade deslumbrante de pedras e gemas. De ametistas cintilantes a esmeraldas profundas, cada gema é uma janela para um mundo de maravilhas naturais. Os visitantes são frequentemente encontrados em um estado de admiração, hipnotizados pelas cores e formas que brilham sob a iluminação cuidadosamente posicionada.
-                                </p>
-                                <p>
-                                    A verdadeira magia da Sotto está no trabalho artesanal. A loja se especializou na arte de esculpir rochas para criar pisos personalizados e únicos. Esta arte não é apenas uma habilidade; é um ato de paixão e precisão. Os artesãos de Sotto trabalham com uma dedicação quase meditativa, transformando blocos brutos de rocha em magníficos pisos que são verdadeiras obras de arte. Cada peça é meticulosamente esculpida, respeitando a integridade e a beleza natural do material, o que resulta em um design que é tanto um prazer para os pés quanto para os olhos.
-                                </p>
-                                <p>
-                                    O que diferencia a Sotto é seu compromisso com a personalização e a atenção aos detalhes. Os clientes podem colaborar com os artesãos para criar desenhos personalizados que refletem seus gostos e personalidades. Seja um piso elegante adornado com o brilho suave do mármore ou um mosaico ousado com pedaços coloridos de granito e quartzo, cada projeto é único.
-                                </p>
-                                <p>
-                                    A Sotto não é apenas uma loja; é uma experiência, um lugar onde a beleza eterna das pedras e o talento humano se encontram para criar algo verdadeiramente extraordinário. É um destino imperdível para aqueles que procuram beleza, inspiração e uma peça de arte que fala diretamente à alma.
-                                </p>
+<div class="container mt-3">
+    <div class="row">
+
+        <!--Comportamento de tela e tipográfia-->
+        <div class="col-lg-4 col-md-6">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#um">
+                            <h5>Grids e Tipografia</h5>
+                        </button>
+                    </div>
+                    <div id="um" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            
+                            <img src="./images/code01.png" alt="code01">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                        <!--botões-->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dois">
+                                            <h5>Botões</h5>
+                                        </button>
+                                    </div>
+                                    <div id="dois" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            
+                                            <img src="./images/code04.png" alt="code01">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-    
-                        </a>
-                    </article>
-                </section>
-            </section>
-        </main>
+                        </div>
+
+                <!--accordion e collapse-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tres">
+                                    <h5>Accordion e Collapse</h5>
+                                </button>
+                            </div>
+                            <div id="tres" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    
+                                    <img src="./images/code05.png" alt="code01">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Grid simplificada-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="headingtwo">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#quatro">
+                                    <h5>Grid Simplificada</h5>
+                                </button>
+                            </div>
+                            <div id="quatro" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <img src="https://via.placeholder.com/100x100" alt="">
+                                                <h5>imagem</h5>
+                                            </div>
+                                            <div class="col">
+                                                <img src="https://via.placeholder.com/100x100" alt="">
+                                                <h5>imagem</h5>
+                                            </div>
+                                            <div class="col">
+                                                <img src="https://via.placeholder.com/100x100" alt="">
+                                                <h5>imagem</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="./images/code02.png" alt="code01">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <!--Tabela-->
+        <div class="col-lg-4 col-md-6">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cinco">
+                            <h5>Tabela</h5>
+                        </button>
+                    </div>
+                    <div id="cinco" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <table class="table table-light">
+                                <caption class="fw-light">Tabela teste</caption>
+                                <thead>
+                                    <th>Nome do produto</th>
+                                    <th>Preço Original</th>
+                                    <th>valor atual</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>produto 01</td>
+                                        <td>R$ 70,00</td>
+                                        <td>R$ 50,00</td>
+                                        <tr>
+                                            <td>produto 02</td>
+                                            <td>R$ 70,00</td>
+                                            <td>R$ 50,00</td>
+                                        </tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <img src="./images/code03.png" alt="code01">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!--Alertas-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#seis">
+                                    <h5>Alertas e mensagens padrões</h5>
+                                </button>
+                            </div>
+                            <div id="seis" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alert alert-danger">
+                                        Mensagem de alerta
+                                    </div>
+                                    <div class="alert alert-info">
+                                        <button class="btn-close" data-bs-dismiss="alert"></button>
+                                        Alerta com botão fechar padrão
+                                    </div>
+                                    <div class="alert alert-dark alert-dismissible">
+                                        <button class="btn-close" data-bs-dismiss="alert"></button>
+                                        Alerta com botão fechar a direita
+                                    </div>
+                                    <img src="./images/code06.png" alt="code01">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </div>
+</div>
+
+    <!--footer-->
+
+    <div class="container">
+        <footer>
+            <div class="row align-items-center">
+                <div class="col d-flex justify-content-end">
+                    <p>&copy; 2023 lOl - Todos os direitos reservados.</p>
+            </div>
+        </footer>
     </div>
 
-    <footer>
-        <div class="container">
-            &copy; 2023 SOTTO - Todos os direitos reservados.
-        </div>
-    </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
