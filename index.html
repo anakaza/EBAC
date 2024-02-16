@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +7,208 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <title>modulo_10_tarefa - Exercicio plugins jquery</title>
+    <title>Modulo 11 - portal de noticias</title>
 </head>
 <body>
 
-    <!--formulário-->
-    <section>
+<!-- cabeçalho -->
+    <header>
         <div class="container">
-            <h2>Cadastre-se</h2>
+            <h1>News</h1>
             <form>
-                <div class="form-campo">
-                    <label for="nome">Nome completo</label>
-                    <input type="text" id="nome" name="nome">
-                </div>
-                <div class="form-campo">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="form-campo">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="Insira apenas os números">
-                </div>
-                <div class="form-campo">
-                    <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" name="cpf" placeholder="Insira apenas os números">
-                </div>
-                <div class="form-campo">
-                    <label for="cep">CEP</label>
-                    <input type="text" id="cep" name="cep" placeholder="Insira apenas os números">
-                </div>
-                <div class="form-campo">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" name="endereco">
-                </div>
-                <div class="form-campo">
-                    <label for="numero">numero do endereço</label>
-                    <input type="text" id="numero" name="numero">
-                </div>
-                <button type="submit">Cadastrar</button>
+                <input type="search" placeholder="Busque no site">
+                <button class="btn-src" type="submit">search</button>
             </form>
         </div>
-    </section>
+        <!-- menu -->
+        <div>
+            <button class="btn-menu" type="button">Menu</button>
+        </div>
+        <nav class="container">
+            <ul class="menu">
+
+                <li>
+                    <h4>Ebac</h4>
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://new.lms.ebaconline.com.br/dashboard">Dashboard</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Módulo 11</h4>
+                    <ul class="submenu">
+                        <li>
+                            <a href="index1.html">Breakpoint</a>
+                        </li>
+                        <li>
+                            <a href="index2.html">Imagens</a>
+                        </li>
+                        <li>
+                            <a href="old_v.html">Site old</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <div class="clear"></div>
+        </nav>
+    </header>
 
 
-    <!---------------------------------------------------->
-    <!--jquery links e plugins-->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="./js/jquery.mask.min.js"></script> <!--jQuery Mask Plugin-->
-    <script src="./js/jquery.validate.js"></script> <!--jQuery validate Plugin-->
-    <script src="./main.js"></script>
+
+<!-- conteudo -->
+    <div class="conteudo container">
+
+
+<!-- conteudo principal -->
+        <main> 
+
+            <section class="destaque"> <!-- área em destaque -->
+                <h2>Em destaque</h2> <!-- titulo -->
+                <article class="noticia"> <!-- noticia em destaque -->
+                    <a href="#"> 
+                        <img src="https://via.placeholder.com/400x400" alt=""> <!-- imagem em destaque -->
+                        <h3> <!-- texto da noticia -->
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        </h3>
+                    </a> 
+                </article>
+            </section>
+            
+            <!--Ultimas noticias-->
+            <section>
+                <h2>Últimas notícias</h2> <!-- titulo -->
+                <div class="noticias">
+
+                    <div class="ultimas-noticia">
+                        <article class="noticia"> <!-- noticia -->
+                            <a href="#"> 
+                                <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem -->
+                                <h3> <!-- texto da noticia -->
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                </h3>
+                            </a> 
+                        </article>
+    
+                        <article class="noticia"> <!-- noticia -->
+                            <a href="#"> 
+                                <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem -->
+                                <h3> <!-- texto da noticia -->
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                </h3>
+                            </a> 
+                        </article>
+    
+                        <article class="noticia"> <!-- noticia -->
+                            <a href="#"> 
+                                <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem -->
+                                <h3> <!-- texto da noticia -->
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                </h3>
+                            </a> 
+                        </article>
+    
+                        <article class="noticia"> <!-- noticia -->
+                            <a href="#"> 
+                                <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem em destaque -->
+                                <h3> <!-- texto da noticia -->
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                </h3>
+                            </a> 
+                        </article>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+
+
+
+<!-- barra lateral -->
+        <aside> 
+            <section class="novidades"> <!-- área lateral -->
+
+                <h2>Novidades da semana</h2> <!-- titulo -->
+
+                <div class="novidades-lateral">
+                    <article class="noticia"> <!-- noticia lateral -->
+                        <a href="#"> 
+                            <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem -->
+                            <h3> <!-- texto da noticia -->
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            </h3>
+                        </a> 
+                    </article>
+    
+                    <article class="noticia"> <!-- noticia lateral -->
+                        <a href="#"> 
+                            <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem -->
+                            <h3> <!-- texto da noticia -->
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            </h3>
+                        </a> 
+                    </article>
+    
+                    <article class="noticia"> <!-- noticia lateral -->
+                        <a href="#"> 
+                            <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem -->
+                            <h3> <!-- texto da noticia -->
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            </h3>
+                        </a> 
+                    </article>
+    
+                    <article class="noticia"> <!-- noticia lateral -->
+                        <a href="#"> 
+                            <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem -->
+                            <h3> <!-- texto da noticia -->
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            </h3>
+                        </a> 
+                    </article>
+
+                    <article class="noticia"> <!-- noticia lateral -->
+                        <a href="#"> 
+                            <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem -->
+                            <h3> <!-- texto da noticia -->
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            </h3>
+                        </a> 
+                    </article>
+
+                    <article class="noticia"> <!-- noticia lateral -->
+                        <a href="#"> 
+                            <img src="https://via.placeholder.com/300x300" alt=""> <!-- imagem -->
+                            <h3> <!-- texto da noticia -->
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            </h3>
+                        </a> 
+                    </article>
+                </div>
+
+
+            </section>
+        </aside>
+
+    </div>
+
+    <footer>
+        <div>&copy; All Rights Reserved</div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.btn-menu').click(function(){
+                $('.menu').slideToggle();
+            });
+        });
+    </script>
+
+
 </body>
 </html>

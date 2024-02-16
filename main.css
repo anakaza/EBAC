@@ -4,65 +4,303 @@
     box-sizing: border-box;
     font-family: 'Familjen Grotesk', sans-serif;
 }
-
 .container{
-    max-width: 20em;
+    max-width: 1024px;
     width: 100%;
-    margin: 0 auto;
-    margin-top: 3em;
-    background-color: rgba(0, 0, 0, 0.068);
-    padding: 2em;
-    border-radius: 2em;
+    margin: 0 auto; /*Centrralizar na hz*/
 }
-.container h2{
+
+
+/*Header*/
+header .container{
+    display: flex;  /* distribuir elementos do container ao seus extremos*/
+    justify-content: space-between;  /* distribuir elementos do container ao seus extremos*/
+    align-items: center; /*Centralizar na vertical*/
+}
+header{
+    padding: 1em 0 0;
+    border-bottom: 1px solid rgb(192, 192, 192);
+    margin-bottom: 2em; /*Separa o header/menu do titulo das seções*/
+}
+.btn-src{
+    padding: 0.2em 1em 0.3em 1em;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    border: none;
+    color: #fff;
+    background-color: black;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 1em;
+}
+header input{
+    align-items: center;
+    border-style: solid;
+    background-color: #ebebeb;
+    padding: 0.2em;
+    border-radius: 0.3em;
+}
+.btn-menu{
+    display: none;
+}
+
+/*regras para o menu*/
+.clear{
+    clear: both;
+}
+.menu > li{ /*aplica somente ao elmento LI filho do menu, e não nos demais dentro do submenu*/
+    float: left; /*Traz o elemento um ao lado do outro*/
+    list-style: none;
+    text-transform: uppercase;
+    padding: 1em;
+    border-top: 4px solid transparent;
+    position: relative; /*Capacidade de conter o elemento filho que tem position absolute sem ultrapassar o container que existe*/
+}
+.menu li:hover{
+    border-color: red;
+}
+
+/*regras para o submenu*/
+.menu li:hover .submenu{ /*Faz com o sub menu apareça ao posicionar o mouse sob o menu*/
+    display: block;
+}
+.submenu{
+    display: none;/*Submenu não visivel*/
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(124, 124, 124);
+    border-left: 1px solid rgb(124, 124, 124); 
+    border-right: 1px solid rgb(124, 124, 124); 
+    position: absolute; /*Impede a locmoção dos demais itens do menu*/
+    left: 0; /*Posiciona o submenu no limite da esquerda dentro do menu*/
+    width: 18em;
+    top: 100%; /*Define o local em 100% após a altura do elmento*/
+}
+.submenu li{
+    display: block;
+    padding: 0.5em 0; /*Separador das linhas do submenu*/
+    margin-left: 0.5em; /*Distância o texto da lateral da caixa*/
+}
+.submenu li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.submenu li a:hover{
+    font-weight: bold;
+}
+
+
+/*regras para o conteudo da página*/
+
+
+
+/*Noticia em destaque*/
+
+.destaque h3 {
+    overflow: hidden; /* Esconde o excesso de texto */
+    word-wrap: break-word; /* Quebra palavras longas */
+    max-width: 100%; /* Limita a largura máxima */
+}
+main{
+    margin-right: 1em;
+}
+.conteudo{
+    display: grid; /*Permite o layout em colunas*/
+    grid-template-columns: 70% 30%;
+}
+.noticia img{
+    width: 100%; /*ajusta a imagem para respeitar o limite máximo do container alocado*/
+    height: auto;
+    border-radius: 0.1em;
+    object-fit: cover;
+}
+.destaque{
+    margin-bottom: 2.5em;
+}
+.destaque .noticia a{
+    display: flex; /*posiciona o texto em destaque para a lateral do noticia.*/
+    font-size: 2em;
+}
+.destaque .noticia img{
+    margin-right: 1em;
+}
+section h2{
     margin-bottom: 1em;
 }
 
-form{
-    max-width: 18em;
-}
-.form-campo{
-    margin-bottom: 0.5em;
-}
-.form-campo label{
-    margin-bottom: 0.5em;
-    display: block;
-    font-weight: 600;
-}
-.form-campo input{
-    width: 100%;
-    display: block;
-    padding: 0.5em;
-    border-radius: 0.2em;
-    border: none;
-}
-/*Remover setas numéricas*/
-form input[type="number"]::-webkit-inner-spin-button,
-form input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0; 
-}
-/*Remover setas numéricas mozila*/
-input[type=number] {
-    -moz-appearance: textfield;
+/*ultimas noticias*/
+.ultimas-noticia{
+    display: grid;
+    grid-template-columns: repeat(3, 32.6%); /*Display em colunas*/
+    column-gap: 1%; /*Espaçamento entre as colunas*/
+    row-gap: 5%; /*Espaçamento entre as linhas*/
 }
 
-form button{
-    width: 100%;
-    align-items: center;
-    margin-top: 1em;
-    padding: 0.5em;
-    font-weight: 600;
-    border: none;
-    background-color: rgb(0, 0, 0);
+
+/*Barra lateral novidades*/
+
+aside .noticia{
+    margin-bottom: 2em;
+}
+
+
+/*Footer*/
+footer{
+    margin-top: 2em;
+    padding: 1em 3em 1em 0;
+    background-color: black;
     color: #fff;
-    border-radius: 0.5em;
-    cursor: pointer;
+    text-align: right;
 }
-/*classe para aplicar um estilo ao span das mensagens js*/
-.error-message{
-    color: rgb(255, 0, 0);
-    font-weight: 500;
-    font-size: 0.8em;
-    opacity: 0.7;
+
+/*Responsividade*/
+
+
+/*Mobile*/
+
+@media screen and (max-width: 767px) {
+    main{ /*ajustar para ocupar 100% do tamanho do container*/
+        width: 100%;
+        margin: 0 auto;
+    }
+    .conteudo{
+        display: block; /**/
+    }
+    .container{
+        max-width: 90%;
+    }
+    header{
+        margin-bottom: 0.5em; /*Separa o header/menu do titulo das seções*/
+    }
+    header /*div*/.container{
+        flex-direction: column; /*Altera o menu e titulo para colunas*/
+    }
+    footer{
+        text-align: center;
+        padding: 1em
+    }
+
+
+    .btn-src{
+        padding: 0.8em 1em 1em 1em;
+        margin: 1em 0em;
+    }
+    header input{
+        font-size: 1em;
+        padding: 0.5em 0 0.5em 0.3em;
+
+    }
+
+
+    .btn-menu{
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        margin: 0 auto;
+        padding: 1em;
+        text-transform: uppercase;
+        border-radius: 0.3em;
+        border: none;
+        color: #fff;
+        background-color: black;
+        font-weight: 600;
+        margin-bottom: 1em;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu > li{
+        clear: both;
+        font-size: 1.2em;
+    }
+    
+    .submenu{
+        display: block;/*Submenu não visivel*/
+        position: relative;
+        border: none;
+        width: 100%;
+    }
+    .submenu li{
+        display: block;
+        padding: 0.5em 0; /*Separador das linhas do submenu*/
+        margin-left: 0; /*Distância o texto da lateral da caixa*/
+    }
+
+
+    .noticia img{
+        max-width: 100%; /*ajusta a imagem para respeitar o limite máximo do container alocado*/
+        border-radius: 0.1em;
+        margin-top: 1em;
+    }
+    .destaque{
+        margin-bottom: 2em;
+    }
+    .destaque .noticia a{
+        display: block; /*posiciona o texto em destaque a baixo da noticia.*/
+        font-size: 1.5em;
+    }
+    .destaque .noticia img{
+        margin-right: 0em;
+    }
+    section h2{
+        margin-bottom: 0em;
+    }
+
+
+    .noticias{
+        display: block;
+    }
+    .noticias .noticia{
+        margin-bottom: 1em;
+    }
+
+    .novidades-lateral,
+    .ultimas-noticia{
+        display: grid;
+        grid-template-columns: repeat(2, 49.5%); /*Display em colunas*/
+        column-gap: 1%; /*Espaçamento entre as colunas*/
+        row-gap: 1%; /*Espaçamento entre as linhas*/
+        margin:1em  0;
+    }
+
 }
+
+@media  screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    .container{
+        max-width: 90%;
+    }
+    .destaque .noticia a{
+        font-size: 1.5em;
+        margin-right: 1em;
+    }
+    .ultimas-noticia{
+        grid-template-columns: repeat(2,49%);
+        margin-right: 1em;
+    }
+    header{
+        margin-bottom: 1em; /*Separa o header/menu do titulo das seções*/
+        padding-bottom: 1em;
+    }
+
+}
+@media  screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    .container{
+        max-width: 90%;
+    }
+    .destaque .noticia a{
+        display: block; /**/
+        font-size: 1.5em;
+        margin-right: 1em;
+    }
+    .ultimas-noticia{
+        grid-template-columns: repeat(2,49%);
+        margin-right: 1em;
+    }
+    header{
+        margin-bottom: 1em; /*Separa o header/menu do titulo das seções*/
+        padding-bottom: 1em;
+    }
+}
+
