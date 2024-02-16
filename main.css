@@ -6,10 +6,10 @@
 }
 
 .text-colored{
-    color: #66801f;
+    color: #ff2e5f;
 }
 .text-colored2{
-    color: #3d4c13;
+    color: #42142a;
 }
 
 /*header*/
@@ -19,11 +19,11 @@
 .navbar-brand,
 .nav .nav-link,
 .navbar-brand:hover{
-    color: #3d4c13;
+    color: #140d1a;
     font-weight: 500;
 }
 .nav .nav-link.active{
-    background-color: #7b9927;
+    background-color: #ff2e5f;
     color: #f6f6f6;
 }
 
@@ -41,19 +41,17 @@
     font-family: 'Rubik', sans-serif;
 }
 section{
-    color: #3d4c13;
+    color: #140d1a;
 }
 
 #sobre-restaurante{
-    background-color: #e8e9e3ab;
+    background-color:  #e9e3e879;
 }
 #sobre-restaurante img{
-    height: 25em;
+    height: 50vh;
     object-fit: cover;
 }
-#sobre-restaurante li{
-    list-style: none;
-}
+
 
 #events{
     background-color: #f9faf4;
@@ -63,19 +61,19 @@ section{
     height: 25em;
 }
 
-#cardapio img{
+#cardapio video{
     object-fit: cover;
-    height: 10em;
+    height: 100%;
 }
 
 #contato{
-    background-color: #e8e9e35e;
+    background-color: #e9e3e879;
 }
 .btn-fc{
-    background-color: #3d4c13;
+    background-color: #42142a;
     color: #e8e8e8;
     font-weight: 600;
-    width: 30%;
+    width: 100%;
 }
 #contato textarea{
     resize: none;
@@ -99,12 +97,14 @@ footer{
     padding: 0 2em;
 }
 
+
 @media (max-width: 767px) {
     .carousel-item{
         height: 10em;
     }
     .section-title{
         margin-top: 0.5em;
+        margin-bottom: 0;
     }
     footer{
         background-color: #e8e9e35e;
@@ -113,4 +113,34 @@ footer{
     .justify-content-end {
         justify-content: center !important; /* Sobrescreva a classe de flexão para centralizar */
     }
+    #events img{
+        object-fit: cover;
+        height: 10em;
+    }
+    #cardapio video{
+        height: 16em;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 1300px){
+    .carousel-item{
+        height: 20em;
+    }    
+    .section-title{
+        margin-top: 0.5em;
+        margin-bottom: 0;
+    }
+    #events img{
+        object-fit: cover;
+        height: 15em;
+    }
+    #cardapio video{
+        height: 35em;
+    }
+}
+
+@media (min-width: 2000px) {
+    .carousel-item{
+        height: 40em;
+    }    
 }
