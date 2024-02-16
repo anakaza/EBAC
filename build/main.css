@@ -1,12 +1,16 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Raleway, sans-serif;
+  font-family: roboto, sans-serif;
 }
 
 body {
-  background-color: #FFF;
+  background-color: #f5f6fa;
+}
+
+li {
+  list-style: none;
 }
 
 .container {
@@ -16,68 +20,75 @@ body {
 }
 
 header {
-  padding: 1em 0;
-  background-color: #01a3a4;
-  text-align: center;
-  color: #FFF;
+  background-color: #182C61;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
-
-.form-container {
-  height: calc(100vh - 69px);
+header .menu {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 40em;
 }
-.form-container h2 {
-  font-size: 3em;
-  text-align: center;
+header .menu li {
+  font-weight: bold;
+  margin-left: 2em;
+}
+header .menu li a {
+  color: #fff;
+  text-decoration: none;
 }
 
-form {
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+
+section {
+  padding: 3.5em 0;
+}
+
+.products {
+  margin-top: 2.5em;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
   width: 100%;
-  max-width: 30em;
+}
+.products .product-item img {
+  width: 100%;
+  border-radius: 1em;
+}
+.products .product-button {
+  display: block;
+  background-color: #44bd32;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  border-radius: 1em;
   margin-top: 1em;
+  text-decoration: none;
 }
-form label {
-  font-weight: bold;
-  cursor: pointer;
-}
-form input {
-  padding: 0.5em;
-  display: block;
-  width: 100%;
-  margin-bottom: 1em;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #01a3a4;
-  padding-bottom: 1em;
-}
-form button {
-  padding: 0.5em;
-  display: block;
-  width: 100%;
-  margin-bottom: 1em;
-  background-color: #00d2d3;
-  border: none;
-  color: #FFF;
-  font-weight: bold;
-}
-form button:hover {
-  background-color: #009fa0;
+.products .product-button:hover {
+  background-color: #4fcc3d;
 }
 
 @media screen and (max-width: 767px) {
+  .products {
+    display: block;
+  }
+  .products .product-item {
+    margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 1023px) {
   .container {
     max-width: 80%;
   }
-  header h1 {
-    font-size: 1.5em;
-  }
-  .form-container h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
+  .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 1%;
   }
 }
 
