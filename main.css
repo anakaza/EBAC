@@ -2,125 +2,167 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 /*
-#a9c439;
-#cafc03;
-#fcb414;
-#61479e;
-#6a24bb;
-#1f1f1f;
-#2a1855;
+#f9f5f2;
+#ead9cc;
+#847c79;
+#3d3531;
 */
-body{
-    background-color: #1f1f1f;;
-}
+
 .container{
     max-width: 1280px;
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
 }
-.separador{
-    padding: 0.1em;
-    background-color:  #a9c439;
-    margin-bottom: 0.8em;
+body{
+    background-color: #f9f5f2;
+}
+.separador{ /* Barra horizontal separadora com div*/
+    background-color: #847c79; 
+    padding: 0.05em;
+    margin: 0.5em 0;
+}
+h2{
+    color: #3d3531;
+    font-weight: 600;
 }
 
-header .container, section .container{
+
+
+header{
+    padding: 2em 0;
+    background-color: #3d3531;
+}
+header .container{
+    display: flex;
+    align-items: center;
+}
+header nav li, .brands-list li{
+    display: inline;
+    margin-left: 2em;
+}
+header nav li a{
+    color:#ead9cc;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+header img{
+    height: 4em;
+    margin-right: 1em;
+}
+header h1{
+    font-size: 3em;
+}
+.lista-hdr{ 
+    display: flex;
+    justify-content: flex-end; /* Assim mantenho o logo e o titulo juntos e a lista nav a direita*/
+}
+
+
+
+section .container{ /* Separado do container do header pq aqui eu tenho o space-between*/
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.brands-list img{
+    height: 6em;
+    margin-top: 2em;
+}
+.brands-list li{ /* Coloquei para deixar a lista em linha*/
+    display: inline;
+}
+.loja img{ /* Tamanho da imagem do logo*/
+    height: 40em;
+    margin-right: 3em;
+    border-radius: 1em;;
+}
+section{
+    padding-top: 3em;
+}
+section p{
+    margin-bottom: 1em;
+    color: #3d3531;
+    font-weight: 500;
+}
+
+
+.menu{ /*menu responsivo*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu img{ 
+    max-width: 200px;
+    width: 125%;
+    border-radius: 1em;
+    object-fit: cover; /* Mantenho a imagem cabendo dentro do espaço "fit"*/
+    
+}
+.itens{
+    max-width: 14%; /* Dividir o menu entre as imagens*/
+}
+
+
+.form-red{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+form{
+    width: 60%;
+}
+form input, textarea{
+    display: block;
+    width: 720px;
+    height: 3em;
+    margin-bottom: 0.5em;
+    border: solid 0.05em #3d3531;
+    padding: 1em;
+    background-color:#f9f5f2;
+    color: #3d3531;
+}
+.formus img{
+    height: 25em;
+    margin-right: 2em;
+}
+.formus{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-header{
-    padding: 1em;
-    background-color:#6a24bb;
-    color:rgba(255, 255, 255, 0.87);
-    font-weight: 900;
-}
-header h1{
-    font-weight: 900;
-}
-header a{
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.897);
-}
-header nav li{
-    display: inline;
-    text-transform: uppercase;
-    font-size: 1em;
-    margin-left: 1em;
-    font-weight: 700;
-}
-
-section h2, section h3{
-    color: rgba(255, 255, 255, 0.774);
-    margin-bottom: 0.2em;
-    text-transform: uppercase;
-}
-section .container{
-    align-items: flex-start;
-    margin-top: 2em;
-    color: #cafc03;
-}
-section p{
-    margin-bottom: 1em;
-    color: rgba(255, 255, 255, 0.774);
-}
-section img{
-    margin-right: 2em;
-    max-width: 100%;
-    height: 400px;
-    border-radius: 0.5em;
-}
-.brands img, .xoxolink img{
-    height: 1.5em;
-    margin-right: 0;
-}
-
-.brands li, .xoxolink li{
-    text-decoration: none;
-    display: inline;
-    margin-right: 1em;
-}
-#contato .container{
-    display: block;
-}
-.contato-meto{
-    display: flex;
-    justify-content: space-between;
-}
-form input,
-form button,
-form textarea{
-    display: block;
-    width: 25em;
-    margin-bottom: 1em;
-    padding: 1em;
-}
-form textarea{
+textarea{
     resize: none;
-    width: 20.8em;
     height: 10em;
 }
 button{
-    padding: 1em;
-    background-color: #a9c439;
+    background-color: #3d3531;
+    color: #ead9cc;
     border: none;
     cursor: pointer;
-    color:rgba(255, 255, 255, 0.774);
-    font-weight: 900;
-}
-button:hover{
-    background-color: #6a24bb;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0.5em;
+    width: 10em;
+    display: block;
+    margin: 2em auto auto auto;
+    border-radius: 0.5em;
 }
 
+
+
+
 footer{
+    margin-top: 2em;
+    background-color: #3d3531;
+    color: #ead9cc;
+    padding: 2em;
     display: flex;
-    background-color: #6a24bb;
-    padding: 1.7em;
-    margin-top: 3em;
     justify-content: flex-end;
-    color: rgba(255, 255, 255, 0.774);
-    width: ;
 }
+
+
+
