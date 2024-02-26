@@ -1,21 +1,33 @@
 {
-  "dependencies": {
-    "-": "^0.0.1",
-    "g": "^2.0.1",
-    "less": "^4.2.0"
-  },
   "name": "ebac",
   "version": "1.0.0",
+  "description": "��#\u0000 \u0000E\u0000B\u0000A\u0000C\u0000\r\u0000 \u0000",
   "main": "index.js",
+  "dependencies": {
+    "graceful-fs": "^4.2.11",
+    "iconv-lite": "^0.6.3",
+    "parse-node-version": "^1.0.1",
+    "pify": "^4.0.1",
+    "safer-buffer": "^2.1.2",
+    "semver": "^5.7.2",
+    "source-map": "^0.6.1"
+  },
   "devDependencies": {
-    "less-watch-compiler": "^1.16.3"
+    "grunt": "^1.6.1",
+    "grunt-concurrent": "^3.0.0",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-replace": "^2.0.2"
   },
   "scripts": {
-    "less": "less-watch-compiler ./src/styles/ ./build/styles",
+    "grunt": "grunt",
+    "build": "grunt build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
-
