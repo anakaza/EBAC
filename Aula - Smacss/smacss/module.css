@@ -1,0 +1,44 @@
+.title{
+    font-size: 40px;
+}
+
+.mensagem{
+    padding: 8px;
+    border: solid 1px #333;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+.mensagem-titulo{
+    font-size: 18px;
+}
+.mensagem-conteudo{
+    font-size: 14px;
+}
+
+.mensagem-error{
+    border-color: red;
+    background-color: rgb(255, 226, 226);
+    color: red;
+}
+
+.accordion{
+border: solid 1px #000;
+border-radius: 8px;
+padding: 8px;
+margin-bottom: 16px;
+}
+.accordion-header{
+    padding: 8px;
+    cursor: pointer;
+    /* text-align: center; */
+    font-weight: 700;
+}
+.accordion-content{
+    border-top: solid 1px #eee;
+    padding: 8px;
+    display: none;
+}
+
+.accordion.is-open .accordion-content{
+    display: block;
+}
