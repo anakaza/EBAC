@@ -1,6 +1,61 @@
-$cor1: red;
-$cor2: blue;
+//importações de arquivos
+@use 'hero';
+
+//reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//------------------------------------------------------
+//Paleta de cores
+$cor1: #040714; //cor de fundo
+$cor2: #c0c0c0; //cor do texto 1
+$cor3: #f9f9f9; //cor do texto 2
+
+//------------------------------------------------------
+//mixins textos e titulos
+@mixin text($fontsize: 16px){
+    font-size: $fontsize;
+    line-height: $fontsize + 10px;
+    color: $cor2;
+}
+@mixin title($fontsize: 40px){
+    @include text($fontsize);
+    color: $cor3;
+}
+
+//tamanhos de fontes para textos e títulos
+.text--bg{
+    @include text (18px);
+}
+.text{
+    @include text;
+}
+.text--sm{
+    @include text (12px);
+}
+.title--bg{
+    @include text (44px);
+}
+.title{
+    @include text;
+}
+.title--sm{
+    @include text (28px);
+}
+
+//configuração especial para links
+.link-text{
+    @include text(18px);
+    color: $cor3;
+    text-decoration: underline;
+}
+
+//------------------------------------------------------
 
 body{
-    background-color: $cor2;
+    background-color: $cor1;
 }
+
+
